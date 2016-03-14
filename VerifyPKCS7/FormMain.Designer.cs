@@ -35,35 +35,35 @@
             this.labelFile = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.buttonBrowse = new System.Windows.Forms.Button();
-            this.panelSigExt = new System.Windows.Forms.TableLayoutPanel();
-            this.labelSigExt = new System.Windows.Forms.Label();
-            this.comboExt = new System.Windows.Forms.ComboBox();
-            this.panelSigFormat = new System.Windows.Forms.TableLayoutPanel();
-            this.labelSigFormat = new System.Windows.Forms.Label();
-            this.panelRadioSigFormat = new System.Windows.Forms.TableLayoutPanel();
-            this.radioSigFormatDer = new System.Windows.Forms.RadioButton();
-            this.radioSigFormatBlah = new System.Windows.Forms.RadioButton();
             this.panelBottom = new System.Windows.Forms.TableLayoutPanel();
             this.buttonDismiss = new System.Windows.Forms.Button();
             this.picture1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.result = new System.Windows.Forms.Label();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.GroupSig = new System.Windows.Forms.GroupBox();
             this.panelSig = new System.Windows.Forms.TableLayoutPanel();
+            this.panelSigExt = new System.Windows.Forms.TableLayoutPanel();
+            this.labelSigExt = new System.Windows.Forms.Label();
+            this.comboExt = new System.Windows.Forms.ComboBox();
+            this.panelSigFormat = new System.Windows.Forms.TableLayoutPanel();
+            this.panelRadioSigFormat = new System.Windows.Forms.TableLayoutPanel();
+            this.radioSigFormatDer = new System.Windows.Forms.RadioButton();
+            this.radioSigFormatBlah = new System.Windows.Forms.RadioButton();
+            this.labelSigFormat = new System.Windows.Forms.Label();
             this.checkDetached = new System.Windows.Forms.CheckBox();
             this.SignatureFile = new System.Windows.Forms.Label();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.panelMain.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.panelFile.SuspendLayout();
-            this.panelSigExt.SuspendLayout();
-            this.panelSigFormat.SuspendLayout();
-            this.panelRadioSigFormat.SuspendLayout();
             this.panelBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture1)).BeginInit();
             this.panel1.SuspendLayout();
             this.GroupSig.SuspendLayout();
             this.panelSig.SuspendLayout();
+            this.panelSigExt.SuspendLayout();
+            this.panelSigFormat.SuspendLayout();
+            this.panelRadioSigFormat.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMain
@@ -119,7 +119,7 @@
             this.panelFile.Name = "panelFile";
             this.panelFile.RowCount = 1;
             this.panelFile.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.panelFile.Size = new System.Drawing.Size(306, 29);
+            this.panelFile.Size = new System.Drawing.Size(430, 29);
             this.panelFile.TabIndex = 0;
             // 
             // labelFile
@@ -139,18 +139,114 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(32, 4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(190, 21);
+            this.comboBox2.Size = new System.Drawing.Size(314, 21);
             this.comboBox2.TabIndex = 1;
             // 
             // buttonBrowse
             // 
             this.buttonBrowse.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.buttonBrowse.Location = new System.Drawing.Point(228, 3);
+            this.buttonBrowse.Location = new System.Drawing.Point(352, 3);
             this.buttonBrowse.Name = "buttonBrowse";
             this.buttonBrowse.Size = new System.Drawing.Size(75, 23);
             this.buttonBrowse.TabIndex = 2;
             this.buttonBrowse.Text = "Browse...";
             this.buttonBrowse.UseVisualStyleBackColor = true;
+            // 
+            // panelBottom
+            // 
+            this.panelBottom.AutoSize = true;
+            this.panelBottom.ColumnCount = 3;
+            this.panelBottom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33389F));
+            this.panelBottom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66611F));
+            this.panelBottom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.panelBottom.Controls.Add(this.buttonDismiss, 2, 0);
+            this.panelBottom.Controls.Add(this.picture1, 0, 0);
+            this.panelBottom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBottom.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
+            this.panelBottom.Location = new System.Drawing.Point(3, 385);
+            this.panelBottom.Name = "panelBottom";
+            this.panelBottom.RowCount = 1;
+            this.panelBottom.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.panelBottom.Size = new System.Drawing.Size(430, 29);
+            this.panelBottom.TabIndex = 3;
+            // 
+            // buttonDismiss
+            // 
+            this.buttonDismiss.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonDismiss.AutoSize = true;
+            this.buttonDismiss.Location = new System.Drawing.Point(290, 3);
+            this.buttonDismiss.Name = "buttonDismiss";
+            this.buttonDismiss.Size = new System.Drawing.Size(137, 23);
+            this.buttonDismiss.TabIndex = 0;
+            this.buttonDismiss.Text = "OK";
+            this.buttonDismiss.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonDismiss.UseVisualStyleBackColor = true;
+            // 
+            // picture1
+            // 
+            this.picture1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picture1.Image = global::VerifyPKCS7.Properties.Resources.Goldkey;
+            this.picture1.InitialImage = ((System.Drawing.Image)(resources.GetObject("picture1.InitialImage")));
+            this.picture1.Location = new System.Drawing.Point(3, 3);
+            this.picture1.Name = "picture1";
+            this.picture1.Size = new System.Drawing.Size(89, 23);
+            this.picture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picture1.TabIndex = 1;
+            this.picture1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.result);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 138);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(430, 241);
+            this.panel1.TabIndex = 4;
+            // 
+            // result
+            // 
+            this.result.AutoSize = true;
+            this.result.CausesValidation = false;
+            this.result.Location = new System.Drawing.Point(3, 3);
+            this.result.Margin = new System.Windows.Forms.Padding(3);
+            this.result.Name = "result";
+            this.result.Size = new System.Drawing.Size(682, 403);
+            this.result.TabIndex = 128;
+            this.result.Text = resources.GetString("result.Text");
+            // 
+            // GroupSig
+            // 
+            this.GroupSig.AutoSize = true;
+            this.GroupSig.Controls.Add(this.panelSig);
+            this.GroupSig.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GroupSig.Location = new System.Drawing.Point(3, 38);
+            this.GroupSig.Name = "GroupSig";
+            this.GroupSig.Size = new System.Drawing.Size(430, 94);
+            this.GroupSig.TabIndex = 5;
+            this.GroupSig.TabStop = false;
+            this.GroupSig.Text = "Signature";
+            // 
+            // panelSig
+            // 
+            this.panelSig.AutoSize = true;
+            this.panelSig.ColumnCount = 3;
+            this.panelSig.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.panelSig.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.panelSig.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.panelSig.Controls.Add(this.panelSigExt, 1, 0);
+            this.panelSig.Controls.Add(this.panelSigFormat, 0, 1);
+            this.panelSig.Controls.Add(this.checkDetached, 0, 0);
+            this.panelSig.Controls.Add(this.SignatureFile, 2, 0);
+            this.panelSig.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSig.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
+            this.panelSig.Location = new System.Drawing.Point(3, 16);
+            this.panelSig.Name = "panelSig";
+            this.panelSig.RowCount = 2;
+            this.panelSig.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelSig.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelSig.Size = new System.Drawing.Size(424, 75);
+            this.panelSig.TabIndex = 0;
             // 
             // panelSigExt
             // 
@@ -214,16 +310,6 @@
             this.panelSigFormat.Size = new System.Drawing.Size(424, 38);
             this.panelSigFormat.TabIndex = 2;
             // 
-            // labelSigFormat
-            // 
-            this.labelSigFormat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelSigFormat.AutoSize = true;
-            this.labelSigFormat.Location = new System.Drawing.Point(3, 12);
-            this.labelSigFormat.Name = "labelSigFormat";
-            this.labelSigFormat.Size = new System.Drawing.Size(39, 13);
-            this.labelSigFormat.TabIndex = 0;
-            this.labelSigFormat.Text = "Format";
-            // 
             // panelRadioSigFormat
             // 
             this.panelRadioSigFormat.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -266,105 +352,15 @@
             this.radioSigFormatBlah.Text = "Blah";
             this.radioSigFormatBlah.UseVisualStyleBackColor = true;
             // 
-            // panelBottom
+            // labelSigFormat
             // 
-            this.panelBottom.AutoSize = true;
-            this.panelBottom.ColumnCount = 3;
-            this.panelBottom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33389F));
-            this.panelBottom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66611F));
-            this.panelBottom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.panelBottom.Controls.Add(this.buttonDismiss, 2, 0);
-            this.panelBottom.Controls.Add(this.picture1, 0, 0);
-            this.panelBottom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBottom.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.panelBottom.Location = new System.Drawing.Point(3, 385);
-            this.panelBottom.Name = "panelBottom";
-            this.panelBottom.RowCount = 1;
-            this.panelBottom.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.panelBottom.Size = new System.Drawing.Size(430, 29);
-            this.panelBottom.TabIndex = 3;
-            // 
-            // buttonDismiss
-            // 
-            this.buttonDismiss.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonDismiss.AutoSize = true;
-            this.buttonDismiss.Location = new System.Drawing.Point(290, 3);
-            this.buttonDismiss.Name = "buttonDismiss";
-            this.buttonDismiss.Size = new System.Drawing.Size(137, 23);
-            this.buttonDismiss.TabIndex = 0;
-            this.buttonDismiss.Text = "OK";
-            this.buttonDismiss.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonDismiss.UseVisualStyleBackColor = true;
-            // 
-            // picture1
-            // 
-            this.picture1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picture1.Image = global::VerifyPKCS7.Properties.Resources.simple_goldkey;
-            this.picture1.InitialImage = ((System.Drawing.Image)(resources.GetObject("picture1.InitialImage")));
-            this.picture1.Location = new System.Drawing.Point(3, 3);
-            this.picture1.Name = "picture1";
-            this.picture1.Size = new System.Drawing.Size(89, 23);
-            this.picture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picture1.TabIndex = 1;
-            this.picture1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.result);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 138);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(430, 241);
-            this.panel1.TabIndex = 4;
-            // 
-            // result
-            // 
-            this.result.AutoSize = true;
-            this.result.CausesValidation = false;
-            this.result.Location = new System.Drawing.Point(3, 3);
-            this.result.Margin = new System.Windows.Forms.Padding(3);
-            this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(682, 403);
-            this.result.TabIndex = 128;
-            this.result.Text = resources.GetString("result.Text");
-            // 
-            // openFileDialog
-            // 
-            this.openFileDialog.FileName = "openFileDialog1";
-            // 
-            // GroupSig
-            // 
-            this.GroupSig.AutoSize = true;
-            this.GroupSig.Controls.Add(this.panelSig);
-            this.GroupSig.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GroupSig.Location = new System.Drawing.Point(3, 38);
-            this.GroupSig.Name = "GroupSig";
-            this.GroupSig.Size = new System.Drawing.Size(430, 94);
-            this.GroupSig.TabIndex = 5;
-            this.GroupSig.TabStop = false;
-            this.GroupSig.Text = "Signature";
-            // 
-            // panelSig
-            // 
-            this.panelSig.AutoSize = true;
-            this.panelSig.ColumnCount = 3;
-            this.panelSig.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.panelSig.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.panelSig.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.panelSig.Controls.Add(this.panelSigExt, 1, 0);
-            this.panelSig.Controls.Add(this.panelSigFormat, 0, 1);
-            this.panelSig.Controls.Add(this.checkDetached, 0, 0);
-            this.panelSig.Controls.Add(this.SignatureFile, 2, 0);
-            this.panelSig.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSig.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.panelSig.Location = new System.Drawing.Point(3, 16);
-            this.panelSig.Name = "panelSig";
-            this.panelSig.RowCount = 2;
-            this.panelSig.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.panelSig.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.panelSig.Size = new System.Drawing.Size(424, 75);
-            this.panelSig.TabIndex = 0;
+            this.labelSigFormat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSigFormat.AutoSize = true;
+            this.labelSigFormat.Location = new System.Drawing.Point(3, 12);
+            this.labelSigFormat.Name = "labelSigFormat";
+            this.labelSigFormat.Size = new System.Drawing.Size(39, 13);
+            this.labelSigFormat.TabIndex = 0;
+            this.labelSigFormat.Text = "Format";
             // 
             // checkDetached
             // 
@@ -388,6 +384,10 @@
             this.SignatureFile.TabIndex = 3;
             this.SignatureFile.Text = "SignatureFile";
             // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,12 +404,6 @@
             this.panelTop.PerformLayout();
             this.panelFile.ResumeLayout(false);
             this.panelFile.PerformLayout();
-            this.panelSigExt.ResumeLayout(false);
-            this.panelSigExt.PerformLayout();
-            this.panelSigFormat.ResumeLayout(false);
-            this.panelSigFormat.PerformLayout();
-            this.panelRadioSigFormat.ResumeLayout(false);
-            this.panelRadioSigFormat.PerformLayout();
             this.panelBottom.ResumeLayout(false);
             this.panelBottom.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture1)).EndInit();
@@ -419,6 +413,12 @@
             this.GroupSig.PerformLayout();
             this.panelSig.ResumeLayout(false);
             this.panelSig.PerformLayout();
+            this.panelSigExt.ResumeLayout(false);
+            this.panelSigExt.PerformLayout();
+            this.panelSigFormat.ResumeLayout(false);
+            this.panelSigFormat.PerformLayout();
+            this.panelRadioSigFormat.ResumeLayout(false);
+            this.panelRadioSigFormat.PerformLayout();
             this.ResumeLayout(false);
 
         }

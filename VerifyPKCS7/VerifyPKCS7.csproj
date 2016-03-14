@@ -76,6 +76,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\greenkey.wmf" />
+    <None Include="Resources\redkey.wmf" />
     <None Include="Resources\simple-goldkey.wmf" />
   </ItemGroup>
   <ItemGroup>
