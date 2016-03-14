@@ -30,15 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelMain = new System.Windows.Forms.TableLayoutPanel();
-            this.panelTop = new System.Windows.Forms.TableLayoutPanel();
             this.panelFile = new System.Windows.Forms.TableLayoutPanel();
             this.labelFile = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboFile = new System.Windows.Forms.ComboBox();
             this.buttonBrowse = new System.Windows.Forms.Button();
             this.panelBottom = new System.Windows.Forms.TableLayoutPanel();
             this.buttonDismiss = new System.Windows.Forms.Button();
-            this.picture1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelScroll = new System.Windows.Forms.Panel();
             this.result = new System.Windows.Forms.Label();
             this.GroupSig = new System.Windows.Forms.GroupBox();
             this.panelSig = new System.Windows.Forms.TableLayoutPanel();
@@ -53,28 +51,31 @@
             this.checkDetached = new System.Windows.Forms.CheckBox();
             this.SignatureFile = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.pictureKey = new System.Windows.Forms.PictureBox();
             this.panelMain.SuspendLayout();
-            this.panelTop.SuspendLayout();
             this.panelFile.SuspendLayout();
             this.panelBottom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panelScroll.SuspendLayout();
             this.GroupSig.SuspendLayout();
             this.panelSig.SuspendLayout();
             this.panelSigExt.SuspendLayout();
             this.panelSigFormat.SuspendLayout();
             this.panelRadioSigFormat.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureKey)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMain
             // 
+            this.panelMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMain.ColumnCount = 1;
             this.panelMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.panelMain.Controls.Add(this.panelTop, 0, 0);
+            this.panelMain.Controls.Add(this.panelFile, 0, 0);
             this.panelMain.Controls.Add(this.panelBottom, 0, 4);
-            this.panelMain.Controls.Add(this.panel1, 0, 3);
+            this.panelMain.Controls.Add(this.panelScroll, 0, 3);
             this.panelMain.Controls.Add(this.GroupSig, 0, 2);
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
             this.panelMain.RowCount = 5;
@@ -83,25 +84,9 @@
             this.panelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.panelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.panelMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.panelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.panelMain.Size = new System.Drawing.Size(436, 417);
             this.panelMain.TabIndex = 0;
-            // 
-            // panelTop
-            // 
-            this.panelTop.AutoSize = true;
-            this.panelTop.ColumnCount = 2;
-            this.panelTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.panelTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.panelTop.Controls.Add(this.panelFile, 0, 0);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelTop.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(0);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.RowCount = 1;
-            this.panelTop.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.panelTop.Size = new System.Drawing.Size(436, 35);
-            this.panelTop.TabIndex = 1;
             // 
             // panelFile
             // 
@@ -112,7 +97,7 @@
             this.panelFile.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.panelFile.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.panelFile.Controls.Add(this.labelFile, 0, 0);
-            this.panelFile.Controls.Add(this.comboBox2, 1, 0);
+            this.panelFile.Controls.Add(this.comboFile, 1, 0);
             this.panelFile.Controls.Add(this.buttonBrowse, 2, 0);
             this.panelFile.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.panelFile.Location = new System.Drawing.Point(3, 3);
@@ -133,14 +118,15 @@
             this.labelFile.Text = "File";
             this.labelFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox2
+            // comboFile
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(32, 4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(314, 21);
-            this.comboBox2.TabIndex = 1;
+            this.comboFile.AllowDrop = true;
+            this.comboFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboFile.FormattingEnabled = true;
+            this.comboFile.Location = new System.Drawing.Point(32, 4);
+            this.comboFile.Name = "comboFile";
+            this.comboFile.Size = new System.Drawing.Size(314, 21);
+            this.comboFile.TabIndex = 1;
             // 
             // buttonBrowse
             // 
@@ -160,7 +146,7 @@
             this.panelBottom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66611F));
             this.panelBottom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.panelBottom.Controls.Add(this.buttonDismiss, 2, 0);
-            this.panelBottom.Controls.Add(this.picture1, 0, 0);
+            this.panelBottom.Controls.Add(this.pictureKey, 0, 0);
             this.panelBottom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBottom.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.panelBottom.Location = new System.Drawing.Point(3, 385);
@@ -182,27 +168,15 @@
             this.buttonDismiss.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDismiss.UseVisualStyleBackColor = true;
             // 
-            // picture1
+            // panelScroll
             // 
-            this.picture1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picture1.Image = global::VerifyPKCS7.Properties.Resources.Goldkey;
-            this.picture1.InitialImage = ((System.Drawing.Image)(resources.GetObject("picture1.InitialImage")));
-            this.picture1.Location = new System.Drawing.Point(3, 3);
-            this.picture1.Name = "picture1";
-            this.picture1.Size = new System.Drawing.Size(89, 23);
-            this.picture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picture1.TabIndex = 1;
-            this.picture1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.result);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 138);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(430, 241);
-            this.panel1.TabIndex = 4;
+            this.panelScroll.AutoScroll = true;
+            this.panelScroll.Controls.Add(this.result);
+            this.panelScroll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelScroll.Location = new System.Drawing.Point(3, 138);
+            this.panelScroll.Name = "panelScroll";
+            this.panelScroll.Size = new System.Drawing.Size(430, 241);
+            this.panelScroll.TabIndex = 4;
             // 
             // result
             // 
@@ -388,6 +362,18 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
+            // pictureKey
+            // 
+            this.pictureKey.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureKey.Image = global::VerifyPKCS7.Properties.Resources.Goldkey;
+            this.pictureKey.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureKey.InitialImage")));
+            this.pictureKey.Location = new System.Drawing.Point(3, 3);
+            this.pictureKey.Name = "pictureKey";
+            this.pictureKey.Size = new System.Drawing.Size(89, 23);
+            this.pictureKey.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureKey.TabIndex = 1;
+            this.pictureKey.TabStop = false;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,15 +386,12 @@
             this.Text = "FormMain";
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
-            this.panelTop.ResumeLayout(false);
-            this.panelTop.PerformLayout();
             this.panelFile.ResumeLayout(false);
             this.panelFile.PerformLayout();
             this.panelBottom.ResumeLayout(false);
             this.panelBottom.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelScroll.ResumeLayout(false);
+            this.panelScroll.PerformLayout();
             this.GroupSig.ResumeLayout(false);
             this.GroupSig.PerformLayout();
             this.panelSig.ResumeLayout(false);
@@ -419,6 +402,7 @@
             this.panelSigFormat.PerformLayout();
             this.panelRadioSigFormat.ResumeLayout(false);
             this.panelRadioSigFormat.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureKey)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -426,10 +410,9 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel panelMain;
-        private System.Windows.Forms.TableLayoutPanel panelTop;
         private System.Windows.Forms.TableLayoutPanel panelFile;
         private System.Windows.Forms.Label labelFile;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboFile;
         private System.Windows.Forms.Button buttonBrowse;
         private System.Windows.Forms.TableLayoutPanel panelSigExt;
         private System.Windows.Forms.Label labelSigExt;
@@ -441,8 +424,8 @@
         private System.Windows.Forms.RadioButton radioSigFormatBlah;
         private System.Windows.Forms.TableLayoutPanel panelBottom;
         private System.Windows.Forms.Button buttonDismiss;
-        private System.Windows.Forms.PictureBox picture1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureKey;
+        private System.Windows.Forms.Panel panelScroll;
         private System.Windows.Forms.Label result;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.GroupBox GroupSig;
