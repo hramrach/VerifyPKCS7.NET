@@ -16,5 +16,20 @@ namespace VerifyPKCS7
         {
             InitializeComponent();
         }
+
+        private void buttonBrowse_Click(object sender, EventArgs e)
+        {
+            openFileDialog.FileName = comboFile.Text;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+                try
+                {
+                    openFileDialog.OpenFile();
+                    comboFile.Text = openFileDialog.FileName;
+                }
+                catch (Exception)
+                {
+
+                }
+        }
     }
 }

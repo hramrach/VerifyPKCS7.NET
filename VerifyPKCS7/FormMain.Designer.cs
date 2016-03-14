@@ -32,7 +32,6 @@
             this.panelMain = new System.Windows.Forms.TableLayoutPanel();
             this.panelFile = new System.Windows.Forms.TableLayoutPanel();
             this.labelFile = new System.Windows.Forms.Label();
-            this.comboFile = new System.Windows.Forms.ComboBox();
             this.buttonBrowse = new System.Windows.Forms.Button();
             this.panelBottom = new System.Windows.Forms.TableLayoutPanel();
             this.buttonDismiss = new System.Windows.Forms.Button();
@@ -51,6 +50,7 @@
             this.SignatureFile = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.result = new System.Windows.Forms.RichTextBox();
+            this.comboFile = new System.Windows.Forms.ComboBox();
             this.panelMain.SuspendLayout();
             this.panelFile.SuspendLayout();
             this.panelBottom.SuspendLayout();
@@ -115,16 +115,6 @@
             this.labelFile.Text = "&File";
             this.labelFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboFile
-            // 
-            this.comboFile.AllowDrop = true;
-            this.comboFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboFile.FormattingEnabled = true;
-            this.comboFile.Location = new System.Drawing.Point(32, 4);
-            this.comboFile.Name = "comboFile";
-            this.comboFile.Size = new System.Drawing.Size(314, 21);
-            this.comboFile.TabIndex = 2;
-            // 
             // buttonBrowse
             // 
             this.buttonBrowse.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -134,6 +124,7 @@
             this.buttonBrowse.TabIndex = 3;
             this.buttonBrowse.Text = "&Browse...";
             this.buttonBrowse.UseVisualStyleBackColor = true;
+            this.buttonBrowse.Click += new System.EventHandler(this.buttonBrowse_Click);
             // 
             // panelBottom
             // 
@@ -365,6 +356,18 @@
             this.result.TabIndex = 13;
             this.result.Text = resources.GetString("result.Text");
             this.result.WordWrap = false;
+            // 
+            // comboFile
+            // 
+            this.comboFile.AllowDrop = true;
+            this.comboFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboFile.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::VerifyPKCS7.Properties.Settings.Default, "MRU", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.comboFile.FormattingEnabled = true;
+            this.comboFile.Location = new System.Drawing.Point(32, 4);
+            this.comboFile.Name = "comboFile";
+            this.comboFile.Size = new System.Drawing.Size(314, 21);
+            this.comboFile.TabIndex = 2;
+            this.comboFile.Text = global::VerifyPKCS7.Properties.Settings.Default.MRU;
             // 
             // FormMain
             // 
