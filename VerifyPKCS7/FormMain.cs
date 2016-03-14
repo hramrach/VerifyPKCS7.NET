@@ -21,15 +21,11 @@ namespace VerifyPKCS7
         {
             openFileDialog.FileName = comboFile.Text;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
-                try
-                {
-                    openFileDialog.OpenFile();
-                    comboFile.Text = openFileDialog.FileName;
-                }
-                catch (Exception)
-                {
-
-                }
+            {
+                openFileDialog.OpenFile();
+                comboFile.Text = openFileDialog.FileName;
+                Properties.Settings.Default.Save();
+            }
         }
     }
 }
