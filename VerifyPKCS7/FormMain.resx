@@ -117,6 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="result.Text" xml:space="preserve">
+    <value>This is a very long text in a lablel.
+It spans multiple rows.
+
+LKDFH LAFLKSDfh klSHFLKDH FLEHFLKSDH FSHDFL KSHDF KLSHDFKLHSDKFHDKFHDHF
+
+KL DHFSDKH FLSDHFKL DKFHSDLFHLDHFDFHLDHFLDHFKLHDFLDHFHSEFIEHFOISHFSEHFDHJSDHFDHFJDHFJKDHFSHDFJKHFES
+
+JDHF S
+
+jdf djfklsdfklsdfksldhfksdhfsjdhfsjdhfksjdfhksdhfjkshdfjkshdfjshdjfhsjkhfhskhfjkhdjfhsjkdhfjshdfjks;df
+
+dfgdfg
+
+dfg
+df
+fd
+g
+df
+dfg
+ethfjf
+gfgh
+fg
+fgh
+
+dfas
+fds
+fds
+fds
+
+
+edfgsd
+
+</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureKey.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -149,40 +184,6 @@
         OVDRRV/YHmOOIQcrqugH22LMOZZhUkMWydQHYy5FDlsEcXe2wJjrCfW/Vr4vLm7M3cghfIq4X9KYriyD
         p4bym033MmYoj/i48j1wIWNm4Ss/rlw3LmDMrPwdVDXEs1jUacxXUQ6vHO6eVvUY8whWg60G/0rr8/5o
         zONZDb36MFqs9yk0Jjzqw2jxi/n5+Q1NzsGFfRwg1AAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="result.Text" xml:space="preserve">
-    <value>This is a very long text in a lablel.
-It spans multiple rows.
-
-LKDFH LAFLKSDfh klSHFLKDH FLEHFLKSDH FSHDFL KSHDF KLSHDFKLHSDKFHDKFHDHF
-
-KL DHFSDKH FLSDHFKL DKFHSDLFHLDHFDFHLDHFLDHFKLHDFLDHFHSEFIEHFOISHFSEHFDHJSDHFDHFJDHFJKDHFSHDFJKHFES
-
-JDHF S
-
-jdf djfklsdfklsdfksldhfksdhfsjdhfsjdhfksjdfhksdhfjkshdfjkshdfjshdjfhsjkhfhskhfjkhdjfhsjkdhfjshdfjks;df
-
-dfgdfg
-
-dfg
-df
-fd
-g
-df
-dfg
-ethfjf
-gfgh
-fg
-fgh
-
-dfas
-fds
-fds
-fds
-
-
-edfgsdfg
 </value>
   </data>
   <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
