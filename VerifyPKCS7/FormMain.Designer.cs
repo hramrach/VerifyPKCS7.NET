@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelMain = new System.Windows.Forms.TableLayoutPanel();
+            this.result = new System.Windows.Forms.RichTextBox();
             this.panelFile = new System.Windows.Forms.TableLayoutPanel();
             this.labelFile = new System.Windows.Forms.Label();
             this.buttonBrowse = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@
             this.checkDetached = new System.Windows.Forms.CheckBox();
             this.SignatureFile = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.result = new System.Windows.Forms.RichTextBox();
             this.comboFile = new System.Windows.Forms.ComboBox();
             this.panelMain.SuspendLayout();
             this.panelFile.SuspendLayout();
@@ -84,6 +84,20 @@
             this.panelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.panelMain.Size = new System.Drawing.Size(436, 417);
             this.panelMain.TabIndex = 0;
+            // 
+            // result
+            // 
+            this.result.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.result.Cursor = System.Windows.Forms.Cursors.Default;
+            this.result.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.result.HideSelection = false;
+            this.result.Location = new System.Drawing.Point(3, 129);
+            this.result.Name = "result";
+            this.result.ReadOnly = true;
+            this.result.Size = new System.Drawing.Size(430, 250);
+            this.result.TabIndex = 13;
+            this.result.Text = resources.GetString("result.Text");
+            this.result.WordWrap = false;
             // 
             // panelFile
             // 
@@ -343,20 +357,6 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
-            // result
-            // 
-            this.result.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.result.Cursor = System.Windows.Forms.Cursors.Default;
-            this.result.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.result.HideSelection = false;
-            this.result.Location = new System.Drawing.Point(3, 129);
-            this.result.Name = "result";
-            this.result.ReadOnly = true;
-            this.result.Size = new System.Drawing.Size(430, 250);
-            this.result.TabIndex = 13;
-            this.result.Text = resources.GetString("result.Text");
-            this.result.WordWrap = false;
-            // 
             // comboFile
             // 
             this.comboFile.AllowDrop = true;
@@ -379,6 +379,7 @@
             this.Controls.Add(this.panelMain);
             this.Name = "FormMain";
             this.Text = "FormMain";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             this.panelFile.ResumeLayout(false);
