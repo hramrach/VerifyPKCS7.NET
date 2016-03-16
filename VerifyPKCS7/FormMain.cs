@@ -8,8 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Security;
-using System.Security.Cryptography;
+using System.Security.Cryptography.Pkcs;
 
 
 namespace VerifyPKCS7
@@ -97,7 +96,7 @@ namespace VerifyPKCS7
 
             /* mind order - textchanged methods are chained */
             loadcombo(comboExt, settings.EXTList, settings.EXT);
-            loadcombo(comboFile, settings.MRUList, settings.MRU);                       
+            loadcombo(comboFile, settings.MRUList, settings.MRU);
         }
 
 
@@ -134,12 +133,12 @@ namespace VerifyPKCS7
             System.IO.FileStream mfs, sfs;
             uint msglen, siglen;
             byte[] msg;
-            byte[] sig;
+            byte[] sig = null;
             pictureKey.Image = Properties.Resources.Goldkey;
             try
             {
                 mfs = System.IO.File.OpenRead(mfpath);
-                msglen = (uint) mfs.Length;
+                msglen = (uint)mfs.Length;
             }
             catch (Exception)
             {
@@ -157,7 +156,7 @@ namespace VerifyPKCS7
                 try
                 {
                     sfs = System.IO.File.OpenRead(sfpath);
-                    siglen = (uint) sfs.Length;
+                    siglen = (uint)sfs.Length;
                 }
                 catch (Exception)
                 {
@@ -172,7 +171,46 @@ namespace VerifyPKCS7
                 sfs.Read(sig, 0, (int)siglen);
 
             }
-                pictureKey.Image = Properties.Resources.Greenkey;
+            bool detached = (sig != null);
+            ContentInfo csig;
+            SignedCms cms;
+            if (detached)
+            {
+                csig = new ContentInfo(sig);
+                cms = new SignedCms(csig, detached);
+            }
+            else
+                cms = new SignedCms();
+            try
+            {
+                cms.Decode(msg);
+                cms.CheckHash();
+                cms.CheckSignature(true);
+                cms.CheckSignature(false);
+
+                result.Text = "";
+                foreach (SignerInfo si in cms.SignerInfos)
+                {
+                    result.Text = String.Concat(
+                        result.Text,
+                        String.Format("Serial: {3}\nDigest Algorithm: {6}\nIssuer: {4}\nValid after: {2}\nValid until: {1}\nSubject: {5}\nFingerprint: {0}\n\n",
+                            si.Certificate.Thumbprint,
+                            si.Certificate.NotAfter,
+                            si.Certificate.NotBefore,
+                            si.Certificate.SerialNumber,
+                            String.Concat(si.Certificate.IssuerName, " ", si.Certificate.Issuer),
+                            String.Concat(si.Certificate.SubjectName, " ", si.Certificate.Subject),
+                            String.Format("{0} ({1})",si.DigestAlgorithm.FriendlyName, si.DigestAlgorithm.Value)
+                            )
+                        );
+                }
+            }
+            catch (Exception e)
+            {
+                result.Text = String.Format("{0:X}: {1}", e.HResult, e.Message);
+                return;
+            }
+            pictureKey.Image = Properties.Resources.Greenkey;
         }
 
         private void comboExt_TextChanged(object sender, EventArgs e)
@@ -227,7 +265,7 @@ namespace VerifyPKCS7
         {
             string f = comboFile.Text;
             if (e.Data.GetDataPresent(DataFormats.FileDrop, false))
-                f = ((string[]) e.Data.GetData(DataFormats.FileDrop, false))[0];
+                f = ((string[])e.Data.GetData(DataFormats.FileDrop, false))[0];
             else if (e.Data.GetDataPresent(DataFormats.StringFormat, true))
                 f = e.Data.GetData(DataFormats.StringFormat, true).ToString();
             updatecombo(comboFile, Properties.Settings.Default.MRUList, f);
