@@ -45,5 +45,28 @@ namespace VerifyPKCS7.Properties {
                 this["MRUList"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string EXT {
+            get {
+                return ((string)(this["EXT"]));
+            }
+            set {
+                this["EXT"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection EXTList {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["EXTList"]));
+            }
+            set {
+                this["EXTList"] = value;
+            }
+        }
     }
 }

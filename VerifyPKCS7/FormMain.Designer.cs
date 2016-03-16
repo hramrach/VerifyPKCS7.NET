@@ -32,8 +32,9 @@
             this.panelMain = new System.Windows.Forms.TableLayoutPanel();
             this.result = new System.Windows.Forms.RichTextBox();
             this.panelFile = new System.Windows.Forms.TableLayoutPanel();
-            this.labelFile = new System.Windows.Forms.Label();
+            this.comboFile = new System.Windows.Forms.ComboBox();
             this.buttonBrowse = new System.Windows.Forms.Button();
+            this.labelFile = new System.Windows.Forms.Label();
             this.panelBottom = new System.Windows.Forms.TableLayoutPanel();
             this.buttonDismiss = new System.Windows.Forms.Button();
             this.pictureKey = new System.Windows.Forms.PictureBox();
@@ -50,7 +51,6 @@
             this.checkDetached = new System.Windows.Forms.CheckBox();
             this.SignatureFile = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.comboFile = new System.Windows.Forms.ComboBox();
             this.panelMain.SuspendLayout();
             this.panelFile.SuspendLayout();
             this.panelBottom.SuspendLayout();
@@ -107,9 +107,9 @@
             this.panelFile.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.panelFile.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.panelFile.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.panelFile.Controls.Add(this.labelFile, 0, 0);
             this.panelFile.Controls.Add(this.comboFile, 1, 0);
             this.panelFile.Controls.Add(this.buttonBrowse, 2, 0);
+            this.panelFile.Controls.Add(this.labelFile, 0, 0);
             this.panelFile.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.panelFile.Location = new System.Drawing.Point(3, 3);
             this.panelFile.Name = "panelFile";
@@ -118,16 +118,18 @@
             this.panelFile.Size = new System.Drawing.Size(430, 29);
             this.panelFile.TabIndex = 0;
             // 
-            // labelFile
+            // comboFile
             // 
-            this.labelFile.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.labelFile.AutoSize = true;
-            this.labelFile.Location = new System.Drawing.Point(3, 8);
-            this.labelFile.Name = "labelFile";
-            this.labelFile.Size = new System.Drawing.Size(23, 13);
-            this.labelFile.TabIndex = 1;
-            this.labelFile.Text = "&File";
-            this.labelFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.comboFile.AllowDrop = true;
+            this.comboFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboFile.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::VerifyPKCS7.Properties.Settings.Default, "MRU", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.comboFile.FormattingEnabled = true;
+            this.comboFile.Location = new System.Drawing.Point(32, 4);
+            this.comboFile.Name = "comboFile";
+            this.comboFile.Size = new System.Drawing.Size(314, 21);
+            this.comboFile.TabIndex = 2;
+            this.comboFile.Text = global::VerifyPKCS7.Properties.Settings.Default.MRU;
+            this.comboFile.TextChanged += new System.EventHandler(this.comboFile_TextChanged);
             // 
             // buttonBrowse
             // 
@@ -139,6 +141,17 @@
             this.buttonBrowse.Text = "&Browse...";
             this.buttonBrowse.UseVisualStyleBackColor = true;
             this.buttonBrowse.Click += new System.EventHandler(this.buttonBrowse_Click);
+            // 
+            // labelFile
+            // 
+            this.labelFile.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelFile.AutoSize = true;
+            this.labelFile.Location = new System.Drawing.Point(3, 8);
+            this.labelFile.Name = "labelFile";
+            this.labelFile.Size = new System.Drawing.Size(23, 13);
+            this.labelFile.TabIndex = 1;
+            this.labelFile.Text = "&File";
+            this.labelFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panelBottom
             // 
@@ -173,7 +186,7 @@
             // pictureKey
             // 
             this.pictureKey.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureKey.Image = global::VerifyPKCS7.Properties.Resources.Goldkey;
+            this.pictureKey.Image = ((System.Drawing.Image)(resources.GetObject("pictureKey.Image")));
             this.pictureKey.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureKey.InitialImage")));
             this.pictureKey.Location = new System.Drawing.Point(3, 3);
             this.pictureKey.Name = "pictureKey";
@@ -251,11 +264,14 @@
             "ep1",
             "ep2",
             "sig"});
+            this.comboExt.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::VerifyPKCS7.Properties.Settings.Default, "EXT", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.comboExt.FormattingEnabled = true;
             this.comboExt.Location = new System.Drawing.Point(81, 3);
             this.comboExt.Name = "comboExt";
             this.comboExt.Size = new System.Drawing.Size(72, 21);
             this.comboExt.TabIndex = 7;
+            this.comboExt.Text = global::VerifyPKCS7.Properties.Settings.Default.EXT;
+            this.comboExt.TextChanged += new System.EventHandler(this.comboExt_TextChanged);
             // 
             // panelSigFormat
             // 
@@ -357,18 +373,6 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
-            // comboFile
-            // 
-            this.comboFile.AllowDrop = true;
-            this.comboFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboFile.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::VerifyPKCS7.Properties.Settings.Default, "MRU", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.comboFile.FormattingEnabled = true;
-            this.comboFile.Location = new System.Drawing.Point(32, 4);
-            this.comboFile.Name = "comboFile";
-            this.comboFile.Size = new System.Drawing.Size(314, 21);
-            this.comboFile.TabIndex = 2;
-            this.comboFile.Text = global::VerifyPKCS7.Properties.Settings.Default.MRU;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,7 +382,7 @@
             this.ClientSize = new System.Drawing.Size(436, 417);
             this.Controls.Add(this.panelMain);
             this.Name = "FormMain";
-            this.Text = "FormMain";
+            this.Text = "Verify PKCS#7 Signature";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
