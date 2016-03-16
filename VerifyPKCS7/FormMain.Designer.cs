@@ -374,6 +374,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(436, 417);
             this.Controls.Add(this.panelMain);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMain";
             this.Text = "Verify PKCS#7 Signature";
             this.Load += new System.EventHandler(this.FormMain_Load);
