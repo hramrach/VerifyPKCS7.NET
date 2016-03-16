@@ -25,7 +25,7 @@ namespace VerifyPKCS7.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("file")]
         public string MRU {
             get {
                 return ((string)(this["MRU"]));
@@ -48,7 +48,7 @@ namespace VerifyPKCS7.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ext")]
         public string EXT {
             get {
                 return ((string)(this["EXT"]));

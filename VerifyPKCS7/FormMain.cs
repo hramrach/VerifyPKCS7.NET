@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -40,8 +41,12 @@ namespace VerifyPKCS7
             if (cb.Items.IndexOf(t) != 0)
             {
                 // should save selection and cursor position here
+                int ss = cb.SelectionStart;
+                int sl = cb.SelectionLength;
+
                 cb.Items.Remove(t);
                 cb.Items.Insert(0, t);
+                cb.Select(ss, sl);
 
                 strs.Clear();
 
@@ -62,18 +67,33 @@ namespace VerifyPKCS7
                 updatecombo(comboFile, Properties.Settings.Default.MRUList, openFileDialog.FileName);
         }
 
+        private void loadcombo(ComboBox cb, StringCollection strs, string text)
+        {
+            /* 
+            There is possibility of data binding between control propertias and settings. However,
+                * you cannot store combobox items as string collection setting because the items are generic collection
+                * you can bind the text property to a setting but saving preferences in textchanged handler saves old value
+                * updating the bound preference causes cursor position reset in the combobox
+            So doing this by hand makes sense at least for combo boxes.
+            */
+            //cb.Items.Clear();
+            foreach (string i in strs)
+                cb.Items.Add(i);
+            cb.Text = text;
+            if (text.Length > 0) cb.SelectionStart = text.Length;
+        }
+
         private void FormMain_Load(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.MRUList == null)
-                Properties.Settings.Default.MRUList = new System.Collections.Specialized.StringCollection { };
-            if (Properties.Settings.Default.EXTList == null)
-                Properties.Settings.Default.EXTList = new System.Collections.Specialized.StringCollection { };
-            //comboFile.Items.Clear();
-            foreach (string i in Properties.Settings.Default.MRUList)
-                comboFile.Items.Add(i);
-            //comboExt.Items.Clear();
-            foreach (string i in Properties.Settings.Default.EXTList)
-                comboExt.Items.Add(i);
+            Properties.Settings settings = Properties.Settings.Default;
+            if (settings.MRUList == null)
+                settings.MRUList = new StringCollection { };
+            if (settings.EXTList == null)
+                settings.EXTList = new StringCollection { };
+
+            /* mind order - textchanged methods are chained */
+            loadcombo(comboExt, settings.EXTList, settings.EXT);
+            loadcombo(comboFile, settings.MRUList, settings.MRU);                       
         }
 
 
@@ -103,13 +123,20 @@ namespace VerifyPKCS7
 
         private void comboExt_TextChanged(object sender, EventArgs e)
         {
-            string f = addext();
-            bool valid;
-            if (!checkfile(f))
-                f = replaceext();
+            string f;
+            bool valid = false;
+            if (comboExt.Text.Length > 0)
+            {
+                f = addext();
+                if (!checkfile(f))
+                    f = replaceext();
 
-            SignatureFile.Text = f;
-            valid = checkfile(f);
+                SignatureFile.Text = f;
+                valid = checkfile(f);
+            }
+            else
+                SignatureFile.Text = "";
+
             labelcolor(SignatureFile, valid);
             if (valid)
                 updatecombo(comboExt, Properties.Settings.Default.EXTList, comboExt.Text);
@@ -123,6 +150,7 @@ namespace VerifyPKCS7
         private void comboFile_TextChanged(object sender, EventArgs e)
         {
             bool valid = checkfile(comboFile.Text);
+
             labelcolor(labelFile, valid);
             if (valid)
                 updatecombo(comboFile, Properties.Settings.Default.MRUList, comboFile.Text);

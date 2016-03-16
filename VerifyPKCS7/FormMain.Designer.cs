@@ -122,13 +122,12 @@
             // 
             this.comboFile.AllowDrop = true;
             this.comboFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboFile.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::VerifyPKCS7.Properties.Settings.Default, "MRU", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.comboFile.FormattingEnabled = true;
             this.comboFile.Location = new System.Drawing.Point(32, 4);
             this.comboFile.Name = "comboFile";
             this.comboFile.Size = new System.Drawing.Size(314, 21);
             this.comboFile.TabIndex = 2;
-            this.comboFile.Text = global::VerifyPKCS7.Properties.Settings.Default.MRU;
+            this.comboFile.Text = "file";
             this.comboFile.TextChanged += new System.EventHandler(this.comboFile_TextChanged);
             // 
             // buttonBrowse
@@ -260,17 +259,11 @@
             // comboExt
             // 
             this.comboExt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboExt.AutoCompleteCustomSource.AddRange(new string[] {
-            "ep1",
-            "ep2",
-            "sig"});
-            this.comboExt.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::VerifyPKCS7.Properties.Settings.Default, "EXT", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.comboExt.FormattingEnabled = true;
             this.comboExt.Location = new System.Drawing.Point(81, 3);
             this.comboExt.Name = "comboExt";
             this.comboExt.Size = new System.Drawing.Size(72, 21);
             this.comboExt.TabIndex = 7;
-            this.comboExt.Text = global::VerifyPKCS7.Properties.Settings.Default.EXT;
+            this.comboExt.Text = "ext";
             this.comboExt.TextChanged += new System.EventHandler(this.comboExt_TextChanged);
             // 
             // panelSigFormat
