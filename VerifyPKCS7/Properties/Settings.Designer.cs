@@ -68,5 +68,41 @@ namespace VerifyPKCS7.Properties {
                 this["EXTList"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool detached {
+            get {
+                return ((bool)(this["detached"]));
+            }
+            set {
+                this["detached"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2097152")]
+        public uint MaxMsg {
+            get {
+                return ((uint)(this["MaxMsg"]));
+            }
+            set {
+                this["MaxMsg"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4096")]
+        public uint MaxSig {
+            get {
+                return ((uint)(this["MaxSig"]));
+            }
+            set {
+                this["MaxSig"] = value;
+            }
+        }
     }
 }

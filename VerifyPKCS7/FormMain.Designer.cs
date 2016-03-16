@@ -129,6 +129,8 @@
             this.comboFile.TabIndex = 2;
             this.comboFile.Text = "file";
             this.comboFile.TextChanged += new System.EventHandler(this.comboFile_TextChanged);
+            this.comboFile.DragDrop += new System.Windows.Forms.DragEventHandler(this.comboFile_DragDrop);
+            this.comboFile.DragEnter += new System.Windows.Forms.DragEventHandler(this.comboFile_DragEnter);
             // 
             // buttonBrowse
             // 
@@ -185,8 +187,8 @@
             // pictureKey
             // 
             this.pictureKey.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureKey.Image = ((System.Drawing.Image)(resources.GetObject("pictureKey.Image")));
-            this.pictureKey.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureKey.InitialImage")));
+            this.pictureKey.Image = global::VerifyPKCS7.Properties.Resources.Goldkey;
+            this.pictureKey.InitialImage = global::VerifyPKCS7.Properties.Resources.Goldkey;
             this.pictureKey.Location = new System.Drawing.Point(3, 3);
             this.pictureKey.Name = "pictureKey";
             this.pictureKey.Size = new System.Drawing.Size(89, 23);
@@ -343,12 +345,16 @@
             // 
             this.checkDetached.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.checkDetached.AutoSize = true;
+            this.checkDetached.Checked = global::VerifyPKCS7.Properties.Settings.Default.detached;
+            this.checkDetached.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkDetached.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::VerifyPKCS7.Properties.Settings.Default, "detached", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.checkDetached.Location = new System.Drawing.Point(3, 8);
             this.checkDetached.Name = "checkDetached";
             this.checkDetached.Size = new System.Drawing.Size(88, 17);
             this.checkDetached.TabIndex = 5;
             this.checkDetached.Text = "Separate File";
             this.checkDetached.UseVisualStyleBackColor = true;
+            this.checkDetached.CheckedChanged += new System.EventHandler(this.checkDetached_CheckedChanged);
             // 
             // SignatureFile
             // 
@@ -368,6 +374,7 @@
             // 
             // FormMain
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
@@ -378,6 +385,8 @@
             this.Name = "FormMain";
             this.Text = "Verify PKCS#7 Signature";
             this.Load += new System.EventHandler(this.FormMain_Load);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.comboFile_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.comboFile_DragEnter);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             this.panelFile.ResumeLayout(false);

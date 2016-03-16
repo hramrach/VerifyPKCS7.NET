@@ -3,16 +3,25 @@
   <Profiles />
   <Settings>
     <Setting Name="MRU" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">file</Value>
     </Setting>
     <Setting Name="MRUList" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="EXT" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">ext</Value>
     </Setting>
     <Setting Name="EXTList" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="detached" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MaxMsg" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">2097152</Value>
+    </Setting>
+    <Setting Name="MaxSig" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">4096</Value>
     </Setting>
   </Settings>
 </SettingsFile>

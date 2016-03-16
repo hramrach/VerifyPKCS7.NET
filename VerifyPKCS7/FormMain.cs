@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security;
+using System.Security.Cryptography;
+
 
 namespace VerifyPKCS7
 {
@@ -24,7 +27,8 @@ namespace VerifyPKCS7
             {
                 try
                 {
-                    System.IO.File.OpenRead(fpath);
+                    System.IO.FileStream fs = System.IO.File.OpenRead(fpath);
+                    fs.Close();
                     return true;
                 }
                 catch (Exception)
@@ -121,11 +125,61 @@ namespace VerifyPKCS7
                 l.ForeColor = Color.Red;
         }
 
+        void sigcheck()
+        {
+            uint MaxMsg = Properties.Settings.Default.MaxMsg;
+            uint MaxSig = Properties.Settings.Default.MaxSig;
+            string mfpath = comboFile.Text;
+            string sfpath = SignatureFile.Text;
+            System.IO.FileStream mfs, sfs;
+            uint msglen, siglen;
+            byte[] msg;
+            byte[] sig;
+            pictureKey.Image = Properties.Resources.Goldkey;
+            try
+            {
+                mfs = System.IO.File.OpenRead(mfpath);
+                msglen = (uint) mfs.Length;
+            }
+            catch (Exception)
+            {
+                return;
+            }
+            if (msglen > MaxMsg)
+            {
+                result.Text = String.Format("File {0} longer than {1} bytes.", mfpath, MaxMsg);
+                return;
+            }
+            msg = new byte[msglen];
+            mfs.Read(msg, 0, (int)msglen);
+            if (sfpath.Length > 0)
+            {
+                try
+                {
+                    sfs = System.IO.File.OpenRead(sfpath);
+                    siglen = (uint) sfs.Length;
+                }
+                catch (Exception)
+                {
+                    return;
+                }
+                if (siglen > MaxSig)
+                {
+                    result.Text = String.Format("File {0} longer than {1} bytes.", sfpath, MaxSig);
+                    return;
+                }
+                sig = new byte[siglen];
+                sfs.Read(sig, 0, (int)siglen);
+
+            }
+                pictureKey.Image = Properties.Resources.Greenkey;
+        }
+
         private void comboExt_TextChanged(object sender, EventArgs e)
         {
             string f;
             bool valid = false;
-            if (comboExt.Text.Length > 0)
+            if ((comboExt.Text.Length > 0) && panelSigExt.Enabled)
             {
                 f = addext();
                 if (!checkfile(f))
@@ -145,6 +199,7 @@ namespace VerifyPKCS7
                 Properties.Settings.Default.EXT = comboExt.Text;
                 Properties.Settings.Default.Save();
             }
+            sigcheck();
         }
 
         private void comboFile_TextChanged(object sender, EventArgs e)
@@ -160,6 +215,32 @@ namespace VerifyPKCS7
                 Properties.Settings.Default.Save();
             }
             comboExt_TextChanged(sender, e);
+        }
+
+        private void checkDetached_CheckedChanged(object sender, EventArgs e)
+        {
+            panelSigExt.Enabled = checkDetached.Checked;
+            comboExt_TextChanged(sender, e);
+        }
+
+        private void comboFile_DragDrop(object sender, DragEventArgs e)
+        {
+            string f = comboFile.Text;
+            if (e.Data.GetDataPresent(DataFormats.FileDrop, false))
+                f = ((string[]) e.Data.GetData(DataFormats.FileDrop, false))[0];
+            else if (e.Data.GetDataPresent(DataFormats.StringFormat, true))
+                f = e.Data.GetData(DataFormats.StringFormat, true).ToString();
+            updatecombo(comboFile, Properties.Settings.Default.MRUList, f);
+        }
+
+        private void comboFile_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop, false))
+                e.Effect = DragDropEffects.Link;
+            else if (e.Data.GetDataPresent(DataFormats.StringFormat, true))
+                e.Effect = DragDropEffects.Copy;
+            else
+                e.Effect = DragDropEffects.None;
         }
     }
 }
