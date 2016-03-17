@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VerifyPKCS7", "VerifyPKCS7\VerifyPKCS7.csproj", "{5A797A62-A68D-467E-9B37-C0789EA70572}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabelBorder", "LabelBorder\LabelBorder.csproj", "{9D98BB6C-8A89-4470-AF4C-D86B335B85EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5A797A62-A68D-467E-9B37-C0789EA70572}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A797A62-A68D-467E-9B37-C0789EA70572}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A797A62-A68D-467E-9B37-C0789EA70572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D98BB6C-8A89-4470-AF4C-D86B335B85EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D98BB6C-8A89-4470-AF4C-D86B335B85EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D98BB6C-8A89-4470-AF4C-D86B335B85EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D98BB6C-8A89-4470-AF4C-D86B335B85EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

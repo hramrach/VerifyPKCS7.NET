@@ -99,7 +99,6 @@ namespace VerifyPKCS7
             loadcombo(comboFile, settings.MRUList, settings.MRU);
         }
 
-
         private string addext()
         {
             return String.Concat(comboFile.Text, ".", comboExt.Text);
@@ -116,12 +115,24 @@ namespace VerifyPKCS7
             return "";
         }
 
-        private void labelcolor(Label l, bool color)
+        private void labelcolor(LabelBorder.LabelBorder l, bool color)
         {
             if (color)
-                l.ForeColor = Color.Green;
+                l.BorderColor = Color.Green;
             else
-                l.ForeColor = Color.Red;
+                l.BorderColor = Color.Red;
+        }
+
+        private void labelclear(LabelBorder.LabelBorder l)
+        {
+            l.BorderColor = l.BackColor;
+        }
+
+        void checkreset()
+        {
+            result.Text = "";
+            pictureKey.Image = Properties.Resources.Goldkey;
+            labelclear(SignatureFile);
         }
 
         void sigcheck()
@@ -134,7 +145,7 @@ namespace VerifyPKCS7
             uint msglen, siglen;
             byte[] msg;
             byte[] sig = null;
-            pictureKey.Image = Properties.Resources.Goldkey;
+            
             try
             {
                 mfs = System.IO.File.OpenRead(mfpath);
@@ -200,7 +211,7 @@ namespace VerifyPKCS7
                             si.Certificate.SerialNumber,
                             String.Concat(si.Certificate.IssuerName, " ", si.Certificate.Issuer),
                             String.Concat(si.Certificate.SubjectName, " ", si.Certificate.Subject),
-                            String.Format("{0} ({1})",si.DigestAlgorithm.FriendlyName, si.DigestAlgorithm.Value)
+                            String.Format("{0} ({1})", si.DigestAlgorithm.FriendlyName, si.DigestAlgorithm.Value)
                             )
                         );
                 }
@@ -217,6 +228,7 @@ namespace VerifyPKCS7
         {
             string f;
             bool valid = false;
+            checkreset();
             if ((comboExt.Text.Length > 0) && panelSigExt.Enabled)
             {
                 f = addext();
@@ -279,6 +291,11 @@ namespace VerifyPKCS7
                 e.Effect = DragDropEffects.Copy;
             else
                 e.Effect = DragDropEffects.None;
+        }
+
+        private void buttonDismiss_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

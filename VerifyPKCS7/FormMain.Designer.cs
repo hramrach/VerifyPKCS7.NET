@@ -34,7 +34,7 @@
             this.panelFile = new System.Windows.Forms.TableLayoutPanel();
             this.comboFile = new System.Windows.Forms.ComboBox();
             this.buttonBrowse = new System.Windows.Forms.Button();
-            this.labelFile = new System.Windows.Forms.Label();
+            this.labelFile = new LabelBorder.LabelBorder();
             this.panelBottom = new System.Windows.Forms.TableLayoutPanel();
             this.buttonDismiss = new System.Windows.Forms.Button();
             this.pictureKey = new System.Windows.Forms.PictureBox();
@@ -49,7 +49,7 @@
             this.radioSigFormatBlah = new System.Windows.Forms.RadioButton();
             this.labelSigFormat = new System.Windows.Forms.Label();
             this.checkDetached = new System.Windows.Forms.CheckBox();
-            this.SignatureFile = new System.Windows.Forms.Label();
+            this.SignatureFile = new LabelBorder.LabelBorder();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.panelMain.SuspendLayout();
             this.panelFile.SuspendLayout();
@@ -123,9 +123,9 @@
             this.comboFile.AllowDrop = true;
             this.comboFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboFile.FormattingEnabled = true;
-            this.comboFile.Location = new System.Drawing.Point(32, 4);
+            this.comboFile.Location = new System.Drawing.Point(38, 4);
             this.comboFile.Name = "comboFile";
-            this.comboFile.Size = new System.Drawing.Size(314, 21);
+            this.comboFile.Size = new System.Drawing.Size(308, 21);
             this.comboFile.TabIndex = 2;
             this.comboFile.Text = "file";
             this.comboFile.TextChanged += new System.EventHandler(this.comboFile_TextChanged);
@@ -147,9 +147,11 @@
             // 
             this.labelFile.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelFile.AutoSize = true;
-            this.labelFile.Location = new System.Drawing.Point(3, 8);
+            this.labelFile.BorderColor = System.Drawing.SystemColors.ControlText;
+            this.labelFile.Location = new System.Drawing.Point(3, 5);
             this.labelFile.Name = "labelFile";
-            this.labelFile.Size = new System.Drawing.Size(23, 13);
+            this.labelFile.Padding = new System.Windows.Forms.Padding(3);
+            this.labelFile.Size = new System.Drawing.Size(29, 19);
             this.labelFile.TabIndex = 1;
             this.labelFile.Text = "&File";
             this.labelFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -174,11 +176,11 @@
             // 
             // buttonDismiss
             // 
-            this.buttonDismiss.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonDismiss.AutoSize = true;
-            this.buttonDismiss.Location = new System.Drawing.Point(290, 3);
+            this.buttonDismiss.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonDismiss.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonDismiss.Location = new System.Drawing.Point(357, 3);
             this.buttonDismiss.Name = "buttonDismiss";
-            this.buttonDismiss.Size = new System.Drawing.Size(137, 23);
+            this.buttonDismiss.Size = new System.Drawing.Size(69, 23);
             this.buttonDismiss.TabIndex = 14;
             this.buttonDismiss.Text = "OK";
             this.buttonDismiss.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -191,7 +193,7 @@
             this.pictureKey.InitialImage = global::VerifyPKCS7.Properties.Resources.Goldkey;
             this.pictureKey.Location = new System.Drawing.Point(3, 3);
             this.pictureKey.Name = "pictureKey";
-            this.pictureKey.Size = new System.Drawing.Size(89, 23);
+            this.pictureKey.Size = new System.Drawing.Size(112, 23);
             this.pictureKey.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureKey.TabIndex = 1;
             this.pictureKey.TabStop = false;
@@ -361,9 +363,11 @@
             this.SignatureFile.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.SignatureFile.AutoEllipsis = true;
             this.SignatureFile.AutoSize = true;
-            this.SignatureFile.Location = new System.Drawing.Point(259, 10);
+            this.SignatureFile.BorderColor = System.Drawing.SystemColors.ControlText;
+            this.SignatureFile.Location = new System.Drawing.Point(259, 7);
             this.SignatureFile.Name = "SignatureFile";
-            this.SignatureFile.Size = new System.Drawing.Size(68, 13);
+            this.SignatureFile.Padding = new System.Windows.Forms.Padding(3);
+            this.SignatureFile.Size = new System.Drawing.Size(74, 19);
             this.SignatureFile.TabIndex = 3;
             this.SignatureFile.Text = "SignatureFile";
             this.SignatureFile.UseMnemonic = false;
@@ -374,11 +378,13 @@
             // 
             // FormMain
             // 
+            this.AcceptButton = this.buttonDismiss;
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.CancelButton = this.buttonDismiss;
             this.ClientSize = new System.Drawing.Size(436, 417);
             this.Controls.Add(this.panelMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -392,7 +398,6 @@
             this.panelFile.ResumeLayout(false);
             this.panelFile.PerformLayout();
             this.panelBottom.ResumeLayout(false);
-            this.panelBottom.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureKey)).EndInit();
             this.GroupSig.ResumeLayout(false);
             this.GroupSig.PerformLayout();
@@ -412,7 +417,6 @@
 
         private System.Windows.Forms.TableLayoutPanel panelMain;
         private System.Windows.Forms.TableLayoutPanel panelFile;
-        private System.Windows.Forms.Label labelFile;
         private System.Windows.Forms.ComboBox comboFile;
         private System.Windows.Forms.Button buttonBrowse;
         private System.Windows.Forms.TableLayoutPanel panelSigExt;
@@ -430,8 +434,9 @@
         private System.Windows.Forms.GroupBox GroupSig;
         private System.Windows.Forms.TableLayoutPanel panelSig;
         private System.Windows.Forms.CheckBox checkDetached;
-        private System.Windows.Forms.Label SignatureFile;
         private System.Windows.Forms.RichTextBox result;
+        private LabelBorder.LabelBorder labelFile;
+        private LabelBorder.LabelBorder SignatureFile;
     }
 }
 
