@@ -188,18 +188,13 @@ namespace VerifyPKCS7
 
             }
             bool detached = (sig != null);
-            ContentInfo csig;
-            SignedCms cms;
-            if (detached)
-            {
-                csig = new ContentInfo(sig);
-                cms = new SignedCms(csig, detached);
-            }
-            else
-                cms = new SignedCms();
+            
             try
             {
-                cms.Decode(msg);
+                ContentInfo cmsg = new ContentInfo(msg);
+                SignedCms cms = new SignedCms(cmsg, detached);
+                if (detached)
+                    cms.Decode(sig);                
                 result_append("Message decoded");
                 cms.CheckHash();
                 result_append("Hash checked");
@@ -214,8 +209,8 @@ namespace VerifyPKCS7
                             si.Certificate.NotAfter,
                             si.Certificate.NotBefore,
                             si.Certificate.SerialNumber,
-                            String.Concat(si.Certificate.IssuerName, " ", si.Certificate.Issuer),
-                            String.Concat(si.Certificate.SubjectName, " ", si.Certificate.Subject),
+                            si.Certificate.Issuer,
+                            si.Certificate.Subject,
                             String.Format("{0} ({1})", si.DigestAlgorithm.FriendlyName, si.DigestAlgorithm.Value)
                             )
                         );
