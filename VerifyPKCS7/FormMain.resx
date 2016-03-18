@@ -117,41 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="result.Text" xml:space="preserve">
-    <value>This is a very long text in a lablel.
-It spans multiple rows.
-
-LKDFH LAFLKSDfh klSHFLKDH FLEHFLKSDH FSHDFL KSHDF KLSHDFKLHSDKFHDKFHDHF
-
-KL DHFSDKH FLSDHFKL DKFHSDLFHLDHFDFHLDHFLDHFKLHDFLDHFHSEFIEHFOISHFSEHFDHJSDHFDHFJDHFJKDHFSHDFJKHFES
-
-JDHF S
-
-jdf djfklsdfklsdfksldhfksdhfsjdhfsjdhfksjdfhksdhfjkshdfjkshdfjshdjfhsjkhfhskhfjkhdjfhsjkdhfjshdfjks;df
-
-dfgdfg
-
-dfg
-df
-fd
-g
-df
-dfg
-ethfjf
-gfgh
-fg
-fgh
-
-dfas
-fds
-fds
-fds
-
-
-edfgsd
-
-</value>
-  </data>
   <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

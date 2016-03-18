@@ -37,7 +37,6 @@
             this.labelFile = new LabelBorder.LabelBorder();
             this.panelBottom = new System.Windows.Forms.TableLayoutPanel();
             this.buttonDismiss = new System.Windows.Forms.Button();
-            this.pictureKey = new System.Windows.Forms.PictureBox();
             this.GroupSig = new System.Windows.Forms.GroupBox();
             this.panelSig = new System.Windows.Forms.TableLayoutPanel();
             this.panelSigExt = new System.Windows.Forms.TableLayoutPanel();
@@ -48,18 +47,19 @@
             this.radioSigFormatDer = new System.Windows.Forms.RadioButton();
             this.radioSigFormatBlah = new System.Windows.Forms.RadioButton();
             this.labelSigFormat = new System.Windows.Forms.Label();
-            this.checkDetached = new System.Windows.Forms.CheckBox();
             this.SignatureFile = new LabelBorder.LabelBorder();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.checkDetached = new System.Windows.Forms.CheckBox();
+            this.pictureKey = new System.Windows.Forms.PictureBox();
             this.panelMain.SuspendLayout();
             this.panelFile.SuspendLayout();
             this.panelBottom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureKey)).BeginInit();
             this.GroupSig.SuspendLayout();
             this.panelSig.SuspendLayout();
             this.panelSigExt.SuspendLayout();
             this.panelSigFormat.SuspendLayout();
             this.panelRadioSigFormat.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureKey)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMain
@@ -96,7 +96,7 @@
             this.result.ReadOnly = true;
             this.result.Size = new System.Drawing.Size(430, 250);
             this.result.TabIndex = 13;
-            this.result.Text = resources.GetString("result.Text");
+            this.result.Text = "";
             this.result.WordWrap = false;
             // 
             // panelFile
@@ -127,7 +127,6 @@
             this.comboFile.Name = "comboFile";
             this.comboFile.Size = new System.Drawing.Size(308, 21);
             this.comboFile.TabIndex = 2;
-            this.comboFile.Text = "file";
             this.comboFile.TextChanged += new System.EventHandler(this.comboFile_TextChanged);
             this.comboFile.DragDrop += new System.Windows.Forms.DragEventHandler(this.comboFile_DragDrop);
             this.comboFile.DragEnter += new System.Windows.Forms.DragEventHandler(this.comboFile_DragEnter);
@@ -185,18 +184,6 @@
             this.buttonDismiss.Text = "OK";
             this.buttonDismiss.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDismiss.UseVisualStyleBackColor = true;
-            // 
-            // pictureKey
-            // 
-            this.pictureKey.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureKey.Image = global::VerifyPKCS7.Properties.Resources.Goldkey;
-            this.pictureKey.InitialImage = global::VerifyPKCS7.Properties.Resources.Goldkey;
-            this.pictureKey.Location = new System.Drawing.Point(3, 3);
-            this.pictureKey.Name = "pictureKey";
-            this.pictureKey.Size = new System.Drawing.Size(112, 23);
-            this.pictureKey.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureKey.TabIndex = 1;
-            this.pictureKey.TabStop = false;
             // 
             // GroupSig
             // 
@@ -267,7 +254,6 @@
             this.comboExt.Name = "comboExt";
             this.comboExt.Size = new System.Drawing.Size(72, 21);
             this.comboExt.TabIndex = 7;
-            this.comboExt.Text = "ext";
             this.comboExt.TextChanged += new System.EventHandler(this.comboExt_TextChanged);
             // 
             // panelSigFormat
@@ -312,6 +298,7 @@
             // 
             this.radioSigFormatDer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.radioSigFormatDer.AutoSize = true;
+            this.radioSigFormatDer.Checked = true;
             this.radioSigFormatDer.Location = new System.Drawing.Point(3, 3);
             this.radioSigFormatDer.Name = "radioSigFormatDer";
             this.radioSigFormatDer.Size = new System.Drawing.Size(48, 17);
@@ -328,7 +315,6 @@
             this.radioSigFormatBlah.Name = "radioSigFormatBlah";
             this.radioSigFormatBlah.Size = new System.Drawing.Size(46, 17);
             this.radioSigFormatBlah.TabIndex = 9;
-            this.radioSigFormatBlah.TabStop = true;
             this.radioSigFormatBlah.Text = "Blah";
             this.radioSigFormatBlah.UseVisualStyleBackColor = true;
             // 
@@ -342,6 +328,23 @@
             this.labelSigFormat.TabIndex = 0;
             this.labelSigFormat.Text = "Format";
             this.labelSigFormat.UseMnemonic = false;
+            // 
+            // SignatureFile
+            // 
+            this.SignatureFile.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.SignatureFile.AutoEllipsis = true;
+            this.SignatureFile.AutoSize = true;
+            this.SignatureFile.BorderColor = System.Drawing.SystemColors.ControlText;
+            this.SignatureFile.Location = new System.Drawing.Point(259, 7);
+            this.SignatureFile.Name = "SignatureFile";
+            this.SignatureFile.Padding = new System.Windows.Forms.Padding(3);
+            this.SignatureFile.Size = new System.Drawing.Size(6, 19);
+            this.SignatureFile.TabIndex = 3;
+            this.SignatureFile.UseMnemonic = false;
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
             // 
             // checkDetached
             // 
@@ -358,23 +361,17 @@
             this.checkDetached.UseVisualStyleBackColor = true;
             this.checkDetached.CheckedChanged += new System.EventHandler(this.checkDetached_CheckedChanged);
             // 
-            // SignatureFile
+            // pictureKey
             // 
-            this.SignatureFile.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.SignatureFile.AutoEllipsis = true;
-            this.SignatureFile.AutoSize = true;
-            this.SignatureFile.BorderColor = System.Drawing.SystemColors.ControlText;
-            this.SignatureFile.Location = new System.Drawing.Point(259, 7);
-            this.SignatureFile.Name = "SignatureFile";
-            this.SignatureFile.Padding = new System.Windows.Forms.Padding(3);
-            this.SignatureFile.Size = new System.Drawing.Size(74, 19);
-            this.SignatureFile.TabIndex = 3;
-            this.SignatureFile.Text = "SignatureFile";
-            this.SignatureFile.UseMnemonic = false;
-            // 
-            // openFileDialog
-            // 
-            this.openFileDialog.FileName = "openFileDialog1";
+            this.pictureKey.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureKey.Image = global::VerifyPKCS7.Properties.Resources.Goldkey;
+            this.pictureKey.InitialImage = global::VerifyPKCS7.Properties.Resources.Goldkey;
+            this.pictureKey.Location = new System.Drawing.Point(3, 3);
+            this.pictureKey.Name = "pictureKey";
+            this.pictureKey.Size = new System.Drawing.Size(112, 23);
+            this.pictureKey.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureKey.TabIndex = 1;
+            this.pictureKey.TabStop = false;
             // 
             // FormMain
             // 
@@ -398,7 +395,6 @@
             this.panelFile.ResumeLayout(false);
             this.panelFile.PerformLayout();
             this.panelBottom.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureKey)).EndInit();
             this.GroupSig.ResumeLayout(false);
             this.GroupSig.PerformLayout();
             this.panelSig.ResumeLayout(false);
@@ -409,6 +405,7 @@
             this.panelSigFormat.PerformLayout();
             this.panelRadioSigFormat.ResumeLayout(false);
             this.panelRadioSigFormat.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureKey)).EndInit();
             this.ResumeLayout(false);
 
         }
