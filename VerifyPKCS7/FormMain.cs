@@ -188,24 +188,28 @@ namespace VerifyPKCS7
 
             }
             bool detached = (sig != null);
-            
+
             try
             {
                 ContentInfo cmsg = new ContentInfo(msg);
                 SignedCms cms = new SignedCms(cmsg, detached);
                 if (detached)
-                    cms.Decode(sig);                
-                result_append("Message decoded");
+                    cms.Decode(sig);
+                result_append("Message decoded..");
                 cms.CheckHash();
-                result_append("Hash checked");
+                result_append("Hash checked..");
                 cms.CheckSignature(true);
-                result_append("Signature checked");
+                result_append("Signature checked..");
                 foreach (SignerInfo si in cms.SignerInfos)
                 {
-                    result.Text = String.Concat(
-                        result.Text,
-                        String.Format("Serial: {3}\nDigest Algorithm: {6}\nIssuer: {4}\nValid after: {2}\nValid until: {1}\nSubject: {5}\nFingerprint: {0}\n\n",
-                            si.Certificate.Thumbprint,
+                    result_append(                        
+                        String.Format("\nSerial: {3}\nDigest Algorithm: {6}\nIssuer: {4}\nValid after: {2}\nValid until: {1}\nSubject: {5}\nFingerprint: {0}\n",
+                            si.Certificate.Thumbprint.ToLower().
+                            ToCharArray().Aggregate("",
+(result, c) => result += ((!string.IsNullOrEmpty(result) && (result.Length + 1) % 3 == 0)
+                          ? " " : "")
+                         + c.ToString()
+            ),
                             si.Certificate.NotAfter,
                             si.Certificate.NotBefore,
                             si.Certificate.SerialNumber,
@@ -216,7 +220,7 @@ namespace VerifyPKCS7
                         );
                 }
                 cms.CheckSignature(false);
-                result_append("Signature certificate validated");
+                result_append("Signature certificate validated.");
             }
             catch (Exception e)
             {

@@ -3,13 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="MRU" Type="System.String" Scope="User">
-      <Value Profile="(Default)">file</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="MRUList" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="EXT" Type="System.String" Scope="User">
-      <Value Profile="(Default)">ext</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="EXTList" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)" />
