@@ -192,6 +192,9 @@
   <data name="buttonBrowse.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
   </data>
+  <data name="buttonBrowse.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="buttonBrowse.Location" type="System.Drawing.Point, System.Drawing">
     <value>352, 3</value>
   </data>
@@ -221,6 +224,9 @@
   </data>
   <data name="labelFile.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="labelFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="labelFile.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 5</value>
@@ -288,6 +294,9 @@
   <data name="buttonDismiss.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
+  <data name="buttonDismiss.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="buttonDismiss.Location" type="System.Drawing.Point, System.Drawing">
     <value>357, 3</value>
   </data>
@@ -317,6 +326,9 @@
   </data>
   <data name="pictureKey.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
+  </data>
+  <data name="pictureKey.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="pictureKey.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -395,6 +407,9 @@
   </data>
   <data name="labelSigExt.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="labelSigExt.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="labelSigExt.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 7</value>
@@ -480,6 +495,9 @@
   <data name="checkDetached.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="checkDetached.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="checkDetached.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 8</value>
   </data>
@@ -509,6 +527,9 @@
   </data>
   <data name="SignatureFile.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="SignatureFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="SignatureFile.Location" type="System.Drawing.Point, System.Drawing">
     <value>259, 7</value>

@@ -43,9 +43,9 @@
             this.panelSigExt = new System.Windows.Forms.TableLayoutPanel();
             this.labelSigExt = new System.Windows.Forms.Label();
             this.comboExt = new System.Windows.Forms.ComboBox();
-            this.checkDetached = new System.Windows.Forms.CheckBox();
             this.SignatureFile = new LabelBorder.LabelBorder();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.checkDetached = new System.Windows.Forms.CheckBox();
             this.panelMain.SuspendLayout();
             this.panelFile.SuspendLayout();
             this.panelBottom.SuspendLayout();
@@ -120,6 +120,7 @@
             this.buttonDismiss.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonDismiss.Name = "buttonDismiss";
             this.buttonDismiss.UseVisualStyleBackColor = true;
+            this.buttonDismiss.Click += new System.EventHandler(this.buttonDismiss_Click);
             // 
             // pictureKey
             // 
@@ -164,16 +165,6 @@
             this.comboExt.Name = "comboExt";
             this.comboExt.TextChanged += new System.EventHandler(this.comboExt_TextChanged);
             // 
-            // checkDetached
-            // 
-            resources.ApplyResources(this.checkDetached, "checkDetached");
-            this.checkDetached.Checked = global::VerifyPKCS7.Properties.Settings.Default.detached;
-            this.checkDetached.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkDetached.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::VerifyPKCS7.Properties.Settings.Default, "detached", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkDetached.Name = "checkDetached";
-            this.checkDetached.UseVisualStyleBackColor = true;
-            this.checkDetached.CheckedChanged += new System.EventHandler(this.checkDetached_CheckedChanged);
-            // 
             // SignatureFile
             // 
             resources.ApplyResources(this.SignatureFile, "SignatureFile");
@@ -185,6 +176,16 @@
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog1";
+            // 
+            // checkDetached
+            // 
+            resources.ApplyResources(this.checkDetached, "checkDetached");
+            this.checkDetached.Checked = global::VerifyPKCS7.Properties.Settings.Default.detached;
+            this.checkDetached.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkDetached.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::VerifyPKCS7.Properties.Settings.Default, "detached", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkDetached.Name = "checkDetached";
+            this.checkDetached.UseVisualStyleBackColor = true;
+            this.checkDetached.CheckedChanged += new System.EventHandler(this.checkDetached_CheckedChanged);
             // 
             // FormMain
             // 
