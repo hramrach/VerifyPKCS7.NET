@@ -128,14 +128,19 @@ namespace VerifyPKCS7
             l.BorderColor = l.BackColor;
         }
 
-        void checkreset()
+        private void checkreset()
         {
             result.Text = "";
             pictureKey.Image = Properties.Resources.Goldkey;
             labelclear(SignatureFile);
         }
 
-        void sigcheck()
+        private void result_append(string str)
+        {
+            result.Text = String.Concat(str, "\n", result.Text);
+        }
+
+        private void sigcheck()
         {
             uint MaxMsg = Properties.Settings.Default.MaxMsg;
             uint MaxSig = Properties.Settings.Default.MaxSig;
@@ -145,7 +150,7 @@ namespace VerifyPKCS7
             uint msglen, siglen;
             byte[] msg;
             byte[] sig = null;
-            
+
             try
             {
                 mfs = System.IO.File.OpenRead(mfpath);
@@ -157,7 +162,7 @@ namespace VerifyPKCS7
             }
             if (msglen > MaxMsg)
             {
-                result.Text = String.Format("File {0} longer than {1} bytes.", mfpath, MaxMsg);
+                result_append(String.Format("File {0} longer than {1} bytes.", mfpath, MaxMsg));
                 return;
             }
             msg = new byte[msglen];
@@ -175,7 +180,7 @@ namespace VerifyPKCS7
                 }
                 if (siglen > MaxSig)
                 {
-                    result.Text = String.Format("File {0} longer than {1} bytes.", sfpath, MaxSig);
+                    result_append(String.Format("File {0} longer than {1} bytes.", sfpath, MaxSig));
                     return;
                 }
                 sig = new byte[siglen];
@@ -195,11 +200,11 @@ namespace VerifyPKCS7
             try
             {
                 cms.Decode(msg);
+                result_append("Message decoded");
                 cms.CheckHash();
+                result_append("Hash checked");
                 cms.CheckSignature(true);
-                cms.CheckSignature(false);
-
-                result.Text = "";
+                result_append("Signature checked");
                 foreach (SignerInfo si in cms.SignerInfos)
                 {
                     result.Text = String.Concat(
@@ -215,10 +220,12 @@ namespace VerifyPKCS7
                             )
                         );
                 }
+                cms.CheckSignature(false);
+                result_append("Signature certificate validated");
             }
             catch (Exception e)
             {
-                result.Text = String.Format("{0:X}: {1}", e.HResult, e.Message);
+                result_append(String.Format("{0:X}: {1}", e.HResult, e.Message));
                 return;
             }
             pictureKey.Image = Properties.Resources.Greenkey;

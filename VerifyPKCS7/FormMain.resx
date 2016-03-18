@@ -117,10 +117,537 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="labelSigExt.Text" xml:space="preserve">
+    <value>File &amp;Extension</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="panelSigExt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 27</value>
+  </data>
+  <data name="panelSig.Size" type="System.Drawing.Size, System.Drawing">
+    <value>424, 66</value>
+  </data>
+  <data name="panelFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>430, 29</value>
+  </data>
+  <data name="&gt;&gt;panelSigExt.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panelRadioSigFormat.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;buttonDismiss.Parent" xml:space="preserve">
+    <value>panelBottom</value>
+  </data>
+  <data name="panelSigExt.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="panelFile.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="SignatureFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="&gt;&gt;labelFile.Parent" xml:space="preserve">
+    <value>panelFile</value>
+  </data>
+  <data name="&gt;&gt;labelSigExt.Name" xml:space="preserve">
+    <value>labelSigExt</value>
+  </data>
+  <data name="radioSigFormatBlah.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="panelBottom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 385</value>
+  </data>
+  <data name="&gt;&gt;labelFile.Name" xml:space="preserve">
+    <value>labelFile</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="result.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="radioSigFormatDer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;GroupSig.Parent" xml:space="preserve">
+    <value>panelMain</value>
+  </data>
+  <data name="GroupSig.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;panelSigFormat.Name" xml:space="preserve">
+    <value>panelSigFormat</value>
+  </data>
+  <data name="&gt;&gt;panelBottom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panelFile.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="comboFile" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="buttonBrowse" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="labelFile" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,Percent,100,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="panelRadioSigFormat.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labelFile.Text" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+  <data name="panelSigExt.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="labelSigExt" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="comboExt" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="pictureKey.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="panelSigFormat.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;result.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SignatureFile.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;labelSigFormat.Parent" xml:space="preserve">
+    <value>panelSigFormat</value>
+  </data>
+  <data name="panelRadioSigFormat.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="radioSigFormatDer" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="radioSigFormatBlah" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;labelSigExt.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>436, 417</value>
+  </data>
+  <data name="&gt;&gt;labelSigFormat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonBrowse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GroupSig.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="panelFile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;result.Name" xml:space="preserve">
+    <value>result</value>
+  </data>
+  <data name="panelSig.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelSigFormat.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pictureKey.Parent" xml:space="preserve">
+    <value>panelBottom</value>
+  </data>
+  <data name="&gt;&gt;radioSigFormatBlah.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panelSigFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>424, 33</value>
+  </data>
+  <data name="&gt;&gt;panelMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="comboFile.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="panelMain.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="radioSigFormatDer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="radioSigFormatDer.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="panelSig.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="buttonDismiss.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="panelBottom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>430, 29</value>
+  </data>
+  <data name="&gt;&gt;result.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkDetached.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="panelMain.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="result" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panelFile" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panelBottom" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="GroupSig" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,Percent,100,AutoSize,0,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="panelMain.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="comboFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>308, 21</value>
+  </data>
+  <data name="buttonBrowse.Text" xml:space="preserve">
+    <value>&amp;Browse...</value>
+  </data>
+  <data name="panelSigExt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="&gt;&gt;panelSig.Name" xml:space="preserve">
+    <value>panelSig</value>
+  </data>
+  <data name="panelMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>436, 417</value>
+  </data>
+  <data name="panelRadioSigFormat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="panelMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog.Name" xml:space="preserve">
+    <value>openFileDialog</value>
+  </data>
+  <data name="&gt;&gt;panelSigExt.Parent" xml:space="preserve">
+    <value>panelSig</value>
+  </data>
+  <data name="&gt;&gt;buttonBrowse.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelRadioSigFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 23</value>
+  </data>
+  <data name="result.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;GroupSig.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureKey.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelSigFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 33</value>
+  </data>
+  <data name="&gt;&gt;panelFile.Name" xml:space="preserve">
+    <value>panelFile</value>
+  </data>
+  <data name="pictureKey.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="&gt;&gt;panelBottom.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panelSig.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panelBottom.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panelSig.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="panelRadioSigFormat.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="comboExt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>81, 3</value>
+  </data>
+  <data name="&gt;&gt;checkDetached.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panelSigExt.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;buttonBrowse.Name" xml:space="preserve">
+    <value>buttonBrowse</value>
+  </data>
+  <data name="&gt;&gt;result.Parent" xml:space="preserve">
+    <value>panelMain</value>
+  </data>
+  <data name="buttonBrowse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 3</value>
+  </data>
+  <data name="&gt;&gt;labelSigFormat.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radioSigFormatDer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 17</value>
+  </data>
+  <data name="panelSig.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="comboExt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormMain</value>
+  </data>
+  <data name="buttonDismiss.Location" type="System.Drawing.Point, System.Drawing">
+    <value>357, 3</value>
+  </data>
+  <data name="&gt;&gt;panelSigFormat.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panelFile.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labelFile.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panelSigFormat.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelSigExt.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;panelSigFormat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SignatureFile.Type" xml:space="preserve">
+    <value>LabelBorder.LabelBorder, LabelBorder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;radioSigFormatBlah.Name" xml:space="preserve">
+    <value>radioSigFormatBlah</value>
+  </data>
+  <data name="comboFile.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="panelSigFormat.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="panelFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="result.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 129</value>
+  </data>
+  <data name="&gt;&gt;labelSigExt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SignatureFile.Parent" xml:space="preserve">
+    <value>panelSig</value>
+  </data>
+  <data name="panelFile.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="&gt;&gt;panelSig.Parent" xml:space="preserve">
+    <value>GroupSig</value>
+  </data>
+  <data name="&gt;&gt;panelSig.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;radioSigFormatDer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureKey.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonDismiss.Name" xml:space="preserve">
+    <value>buttonDismiss</value>
+  </data>
+  <data name="buttonBrowse.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="SignatureFile.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="buttonDismiss.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 23</value>
+  </data>
+  <data name="&gt;&gt;SignatureFile.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panelBottom.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkDetached.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 17</value>
+  </data>
+  <data name="labelFile.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;radioSigFormatBlah.Parent" xml:space="preserve">
+    <value>panelRadioSigFormat</value>
+  </data>
+  <data name="labelSigExt.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;labelFile.Type" xml:space="preserve">
+    <value>LabelBorder.LabelBorder, LabelBorder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;comboFile.Parent" xml:space="preserve">
+    <value>panelFile</value>
+  </data>
+  <data name="labelFile.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;panelRadioSigFormat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panelSigExt.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;SignatureFile.Name" xml:space="preserve">
+    <value>SignatureFile</value>
+  </data>
+  <data name="labelSigExt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="panelBottom.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="comboFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 4</value>
+  </data>
+  <data name="panelSig.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="&gt;&gt;panelMain.Name" xml:space="preserve">
+    <value>panelMain</value>
+  </data>
+  <data name="radioSigFormatBlah.Text" xml:space="preserve">
+    <value>Blah</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Verify PKCS#7 Signature</value>
+  </data>
+  <data name="radioSigFormatBlah.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelSigFormat.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="&gt;&gt;comboFile.Name" xml:space="preserve">
+    <value>comboFile</value>
+  </data>
+  <data name="labelFile.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="pictureKey.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;comboFile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonBrowse.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="buttonDismiss.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;GroupSig.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;labelSigExt.Parent" xml:space="preserve">
+    <value>panelSigExt</value>
+  </data>
+  <data name="panelBottom.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="buttonDismiss" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="pictureKey" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33,33389,Percent,66,66611,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;comboExt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 5</value>
+  </data>
+  <data name="labelFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 19</value>
+  </data>
+  <data name="&gt;&gt;checkDetached.Parent" xml:space="preserve">
+    <value>panelSig</value>
+  </data>
+  <data name="&gt;&gt;buttonDismiss.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelSigExt.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelFile.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="comboExt.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;panelRadioSigFormat.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioSigFormatBlah.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 3</value>
+  </data>
+  <data name="GroupSig.Size" type="System.Drawing.Size, System.Drawing">
+    <value>430, 85</value>
+  </data>
+  <data name="labelSigExt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 7</value>
+  </data>
+  <data name="pictureKey.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="pictureKey.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 23</value>
+  </data>
+  <data name="radioSigFormatBlah.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="panelRadioSigFormat.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="SignatureFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>259, 7</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panelSigFormat.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;buttonBrowse.Parent" xml:space="preserve">
+    <value>panelFile</value>
+  </data>
+  <data name="SignatureFile.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panelFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioSigFormatDer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GroupSig.Text" xml:space="preserve">
+    <value>&amp;Signature</value>
+  </data>
+  <data name="panelMain.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panelFile.Parent" xml:space="preserve">
+    <value>panelMain</value>
+  </data>
+  <data name="GroupSig.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 38</value>
+  </data>
+  <data name="&gt;&gt;panelSigExt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelSig.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelSigExt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="panelSigFormat.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEA1dUQAAEABACQcQAAFgAAACgAAADVAAAAqgEAAAEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -610,4 +1137,175 @@
         ////////////////////////////////+AD///////////////////////////////////gA
 </value>
   </data>
+  <data name="panelSigExt.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;checkDetached.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="radioSigFormatBlah.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 17</value>
+  </data>
+  <data name="labelSigFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 10</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="panelRadioSigFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 5</value>
+  </data>
+  <data name="&gt;&gt;checkDetached.Name" xml:space="preserve">
+    <value>checkDetached</value>
+  </data>
+  <data name="panelBottom.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="result.Size" type="System.Drawing.Size, System.Drawing">
+    <value>430, 250</value>
+  </data>
+  <data name="comboExt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 21</value>
+  </data>
+  <data name="panelSigExt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 3</value>
+  </data>
+  <data name="radioSigFormatDer.Text" xml:space="preserve">
+    <value>&amp;DER</value>
+  </data>
+  <data name="&gt;&gt;comboExt.Parent" xml:space="preserve">
+    <value>panelSigExt</value>
+  </data>
+  <data name="panelBottom.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="radioSigFormatDer.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;comboFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelRadioSigFormat.Parent" xml:space="preserve">
+    <value>panelSigFormat</value>
+  </data>
+  <data name="panelSigFormat.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="panelRadioSigFormat" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelSigFormat" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="result.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;panelSigFormat.Parent" xml:space="preserve">
+    <value>panelSig</value>
+  </data>
+  <data name="panelFile.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkDetached.Text" xml:space="preserve">
+    <value>Separate File</value>
+  </data>
+  <data name="checkDetached.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="buttonDismiss.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;comboExt.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelRadioSigFormat.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pictureKey.Name" xml:space="preserve">
+    <value>pictureKey</value>
+  </data>
+  <data name="&gt;&gt;panelRadioSigFormat.Name" xml:space="preserve">
+    <value>panelRadioSigFormat</value>
+  </data>
+  <data name="&gt;&gt;buttonDismiss.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelFile.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panelMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioSigFormatBlah.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panelBottom.Parent" xml:space="preserve">
+    <value>panelMain</value>
+  </data>
+  <data name="buttonDismiss.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="checkDetached.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;comboExt.Name" xml:space="preserve">
+    <value>comboExt</value>
+  </data>
+  <data name="&gt;&gt;labelSigFormat.Name" xml:space="preserve">
+    <value>labelSigFormat</value>
+  </data>
+  <data name="GroupSig.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panelFile.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="panelSigFormat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;radioSigFormatDer.Parent" xml:space="preserve">
+    <value>panelRadioSigFormat</value>
+  </data>
+  <data name="SignatureFile.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="result.WordWrap" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;radioSigFormatDer.Name" xml:space="preserve">
+    <value>radioSigFormatDer</value>
+  </data>
+  <data name="panelMain.RowCount" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;GroupSig.Name" xml:space="preserve">
+    <value>GroupSig</value>
+  </data>
+  <data name="panelSig.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="panelSigExt" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="panelSigFormat" Row="1" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;Control Name="checkDetached" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="SignatureFile" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0,Percent,100" /&gt;&lt;Rows Styles="Percent,50,Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;panelBottom.Name" xml:space="preserve">
+    <value>panelBottom</value>
+  </data>
+  <data name="&gt;&gt;panelSigExt.Name" xml:space="preserve">
+    <value>panelSigExt</value>
+  </data>
+  <data name="checkDetached.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 8</value>
+  </data>
+  <data name="labelSigFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="&gt;&gt;buttonBrowse.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelSigFormat.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelSigFormat.Text" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
