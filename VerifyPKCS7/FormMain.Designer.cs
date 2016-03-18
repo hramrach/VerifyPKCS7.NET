@@ -43,11 +43,6 @@
             this.panelSigExt = new System.Windows.Forms.TableLayoutPanel();
             this.labelSigExt = new System.Windows.Forms.Label();
             this.comboExt = new System.Windows.Forms.ComboBox();
-            this.panelSigFormat = new System.Windows.Forms.TableLayoutPanel();
-            this.panelRadioSigFormat = new System.Windows.Forms.TableLayoutPanel();
-            this.radioSigFormatDer = new System.Windows.Forms.RadioButton();
-            this.radioSigFormatBlah = new System.Windows.Forms.RadioButton();
-            this.labelSigFormat = new System.Windows.Forms.Label();
             this.checkDetached = new System.Windows.Forms.CheckBox();
             this.SignatureFile = new LabelBorder.LabelBorder();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
@@ -58,8 +53,6 @@
             this.GroupSig.SuspendLayout();
             this.panelSig.SuspendLayout();
             this.panelSigExt.SuspendLayout();
-            this.panelSigFormat.SuspendLayout();
-            this.panelRadioSigFormat.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMain
@@ -74,9 +67,9 @@
             // 
             // result
             // 
-            resources.ApplyResources(this.result, "result");
             this.result.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.result.Cursor = System.Windows.Forms.Cursors.Default;
+            resources.ApplyResources(this.result, "result");
             this.result.HideSelection = false;
             this.result.Name = "result";
             this.result.ReadOnly = true;
@@ -92,8 +85,8 @@
             // 
             // comboFile
             // 
-            resources.ApplyResources(this.comboFile, "comboFile");
             this.comboFile.AllowDrop = true;
+            resources.ApplyResources(this.comboFile, "comboFile");
             this.comboFile.FormattingEnabled = true;
             this.comboFile.Name = "comboFile";
             this.comboFile.TextChanged += new System.EventHandler(this.comboFile_TextChanged);
@@ -147,7 +140,6 @@
             // 
             resources.ApplyResources(this.panelSig, "panelSig");
             this.panelSig.Controls.Add(this.panelSigExt, 1, 0);
-            this.panelSig.Controls.Add(this.panelSigFormat, 0, 1);
             this.panelSig.Controls.Add(this.checkDetached, 0, 0);
             this.panelSig.Controls.Add(this.SignatureFile, 2, 0);
             this.panelSig.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
@@ -172,43 +164,6 @@
             this.comboExt.Name = "comboExt";
             this.comboExt.TextChanged += new System.EventHandler(this.comboExt_TextChanged);
             // 
-            // panelSigFormat
-            // 
-            resources.ApplyResources(this.panelSigFormat, "panelSigFormat");
-            this.panelSig.SetColumnSpan(this.panelSigFormat, 3);
-            this.panelSigFormat.Controls.Add(this.panelRadioSigFormat, 1, 0);
-            this.panelSigFormat.Controls.Add(this.labelSigFormat, 0, 0);
-            this.panelSigFormat.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.panelSigFormat.Name = "panelSigFormat";
-            // 
-            // panelRadioSigFormat
-            // 
-            resources.ApplyResources(this.panelRadioSigFormat, "panelRadioSigFormat");
-            this.panelRadioSigFormat.Controls.Add(this.radioSigFormatDer, 0, 0);
-            this.panelRadioSigFormat.Controls.Add(this.radioSigFormatBlah, 1, 0);
-            this.panelRadioSigFormat.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.panelRadioSigFormat.Name = "panelRadioSigFormat";
-            // 
-            // radioSigFormatDer
-            // 
-            resources.ApplyResources(this.radioSigFormatDer, "radioSigFormatDer");
-            this.radioSigFormatDer.Checked = true;
-            this.radioSigFormatDer.Name = "radioSigFormatDer";
-            this.radioSigFormatDer.TabStop = true;
-            this.radioSigFormatDer.UseVisualStyleBackColor = true;
-            // 
-            // radioSigFormatBlah
-            // 
-            resources.ApplyResources(this.radioSigFormatBlah, "radioSigFormatBlah");
-            this.radioSigFormatBlah.Name = "radioSigFormatBlah";
-            this.radioSigFormatBlah.UseVisualStyleBackColor = true;
-            // 
-            // labelSigFormat
-            // 
-            resources.ApplyResources(this.labelSigFormat, "labelSigFormat");
-            this.labelSigFormat.Name = "labelSigFormat";
-            this.labelSigFormat.UseMnemonic = false;
-            // 
             // checkDetached
             // 
             resources.ApplyResources(this.checkDetached, "checkDetached");
@@ -230,13 +185,12 @@
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog1";
-            resources.ApplyResources(this.openFileDialog, "openFileDialog");
             // 
             // FormMain
             // 
             this.AcceptButton = this.buttonDismiss;
-            resources.ApplyResources(this, "$this");
             this.AllowDrop = true;
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonDismiss;
             this.Controls.Add(this.panelMain);
@@ -256,10 +210,6 @@
             this.panelSig.PerformLayout();
             this.panelSigExt.ResumeLayout(false);
             this.panelSigExt.PerformLayout();
-            this.panelSigFormat.ResumeLayout(false);
-            this.panelSigFormat.PerformLayout();
-            this.panelRadioSigFormat.ResumeLayout(false);
-            this.panelRadioSigFormat.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -273,11 +223,6 @@
         private System.Windows.Forms.TableLayoutPanel panelSigExt;
         private System.Windows.Forms.Label labelSigExt;
         private System.Windows.Forms.ComboBox comboExt;
-        private System.Windows.Forms.TableLayoutPanel panelSigFormat;
-        private System.Windows.Forms.Label labelSigFormat;
-        private System.Windows.Forms.TableLayoutPanel panelRadioSigFormat;
-        private System.Windows.Forms.RadioButton radioSigFormatDer;
-        private System.Windows.Forms.RadioButton radioSigFormatBlah;
         private System.Windows.Forms.TableLayoutPanel panelBottom;
         private System.Windows.Forms.Button buttonDismiss;
         private System.Windows.Forms.PictureBox pictureKey;
