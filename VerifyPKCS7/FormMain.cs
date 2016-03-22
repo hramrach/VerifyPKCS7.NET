@@ -298,6 +298,16 @@ namespace VerifyPKCS7
             Application.Exit();
         }
 
+        private void FormMain_HelpButtonClicked(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            AboutBox.get.Show();
+        }
+
+        private void pictureKey_Click(object sender, EventArgs e)
+        {
+            AboutBox.get.Show();
+        }
+
         private void FormMain_ClientSizeChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.Save();

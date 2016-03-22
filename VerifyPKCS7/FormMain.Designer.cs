@@ -129,6 +129,7 @@
             this.pictureKey.InitialImage = global::VerifyPKCS7.Properties.Resources.Goldkey;
             this.pictureKey.Name = "pictureKey";
             this.pictureKey.TabStop = false;
+            this.pictureKey.Click += new System.EventHandler(this.pictureKey_Click);
             // 
             // GroupSig
             // 
@@ -197,7 +198,9 @@
             this.ClientSize = global::VerifyPKCS7.Properties.Settings.Default.WindowSize;
             this.Controls.Add(this.panelMain);
             this.DataBindings.Add(new System.Windows.Forms.Binding("ClientSize", global::VerifyPKCS7.Properties.Settings.Default, "WindowSize", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.HelpButton = true;
             this.Name = "FormMain";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.FormMain_HelpButtonClicked);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.ClientSizeChanged += new System.EventHandler(this.FormMain_ClientSizeChanged);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.comboFile_DragDrop);
