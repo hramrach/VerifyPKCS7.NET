@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VerifyPKCS7", "VerifyPKCS7\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabelBorder", "LabelBorder\LabelBorder.csproj", "{9D98BB6C-8A89-4470-AF4C-D86B335B85EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersistentSettings", "PersistentSettings\PersistentSettings.csproj", "{70DD8C52-4278-49AB-A977-BF8BFF3D60DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9D98BB6C-8A89-4470-AF4C-D86B335B85EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D98BB6C-8A89-4470-AF4C-D86B335B85EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D98BB6C-8A89-4470-AF4C-D86B335B85EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70DD8C52-4278-49AB-A977-BF8BFF3D60DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70DD8C52-4278-49AB-A977-BF8BFF3D60DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70DD8C52-4278-49AB-A977-BF8BFF3D60DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70DD8C52-4278-49AB-A977-BF8BFF3D60DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

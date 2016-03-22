@@ -124,6 +124,10 @@
       <Project>{9d98bb6c-8a89-4470-af4c-d86b335b85ef}</Project>
       <Name>LabelBorder</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PersistentSettings\PersistentSettings.csproj">
+      <Project>{70dd8c52-4278-49ab-a977-bf8bff3d60dc}</Project>
+      <Name>PersistentSettings</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
