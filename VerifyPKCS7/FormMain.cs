@@ -196,7 +196,7 @@ namespace VerifyPKCS7
                 result_append("Signature checked..");
                 foreach (SignerInfo si in cms.SignerInfos)
                 {
-                    result_append(                        
+                    result_append(
                         String.Format("\nSerial: {3}\nDigest Algorithm: {6}\nIssuer: {4}\nValid after: {2}\nValid until: {1}\nSubject: {5}\nFingerprint: {0}\n",
                             si.Certificate.Thumbprint.ToLower().
                             ToCharArray().Aggregate("",

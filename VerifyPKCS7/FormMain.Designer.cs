@@ -174,10 +174,6 @@
             this.SignatureFile.Name = "SignatureFile";
             this.SignatureFile.UseMnemonic = false;
             // 
-            // openFileDialog
-            // 
-            this.openFileDialog.FileName = "openFileDialog1";
-            // 
             // checkDetached
             // 
             resources.ApplyResources(this.checkDetached, "checkDetached");
