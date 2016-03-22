@@ -23,5 +23,8 @@
     <Setting Name="MaxSig" Type="System.UInt32" Scope="User">
       <Value Profile="(Default)">4096</Value>
     </Setting>
+    <Setting Name="WindowSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">436, 417</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

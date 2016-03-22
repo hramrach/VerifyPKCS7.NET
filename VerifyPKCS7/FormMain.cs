@@ -297,5 +297,10 @@ namespace VerifyPKCS7
         {
             Application.Exit();
         }
+
+        private void FormMain_ClientSizeChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Save();
+        }
     }
 }

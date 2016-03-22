@@ -194,9 +194,12 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonDismiss;
+            this.ClientSize = global::VerifyPKCS7.Properties.Settings.Default.WindowSize;
             this.Controls.Add(this.panelMain);
+            this.DataBindings.Add(new System.Windows.Forms.Binding("ClientSize", global::VerifyPKCS7.Properties.Settings.Default, "WindowSize", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Name = "FormMain";
             this.Load += new System.EventHandler(this.FormMain_Load);
+            this.ClientSizeChanged += new System.EventHandler(this.FormMain_ClientSizeChanged);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.comboFile_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.comboFile_DragEnter);
             this.panelMain.ResumeLayout(false);
@@ -212,6 +215,7 @@
             this.panelSigExt.ResumeLayout(false);
             this.panelSigExt.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
