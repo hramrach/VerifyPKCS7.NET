@@ -26,5 +26,8 @@
     <Setting Name="WindowSize" Type="System.Drawing.Size" Scope="User">
       <Value Profile="(Default)">436, 417</Value>
     </Setting>
+    <Setting Name="PrintCertData" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ndibasfx</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

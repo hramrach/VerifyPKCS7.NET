@@ -196,22 +196,53 @@ namespace VerifyPKCS7
                 result_append("Signature checked..");
                 foreach (SignerInfo si in cms.SignerInfos)
                 {
+
                     result_append(
-                        String.Format("\nSerial: {3}\nDigest Algorithm: {6}\nIssuer: {4}\nValid after: {2}\nValid until: {1}\nSubject: {5}\nFingerprint: {0}\n",
-                            si.Certificate.Thumbprint.ToLower().
-                            ToCharArray().Aggregate("",
-(result, c) => result += ((!string.IsNullOrEmpty(result) && (result.Length + 1) % 3 == 0)
-                          ? " " : "")
-                         + c.ToString()
-            ),
-                            si.Certificate.NotAfter,
-                            si.Certificate.NotBefore,
-                            si.Certificate.SerialNumber,
-                            si.Certificate.Issuer,
-                            si.Certificate.Subject,
-                            String.Format("{0} ({1})", si.DigestAlgorithm.FriendlyName, si.DigestAlgorithm.Value)
-                            )
-                        );
+                        Properties.Settings.Default.PrintCertData.ToLower().ToCharArray().Aggregate("\n",
+                            (result, c) =>
+                                {
+                                    switch (c)
+                                    {
+                                        case 'n':
+                                            result += "Serial : ";
+                                            result += si.Certificate.SerialNumber.ToString();
+                                            break;
+                                        case 'd':
+                                            result += "Digest Algorithm: ";
+                                            result += string.Format("{0} ({1})", si.DigestAlgorithm.FriendlyName, si.DigestAlgorithm.Value);
+                                            break;
+                                        case 'i':
+                                            result += "Issuer: ";
+                                            result += si.Certificate.Issuer.ToString();
+                                            break;
+                                        case 's':
+                                            result += "Subject: ";
+                                            result += si.Certificate.Subject.ToString();
+                                            break;
+                                        case 'b':
+                                            result += "Valid from: ";
+                                            result += si.Certificate.NotBefore.ToString();
+                                            break;
+                                        case 'a':
+                                            result += "Valid until: ";
+                                            result += si.Certificate.NotAfter.ToString();
+                                            break;
+                                        case 'f':
+                                            result += "Fingerprint: ";
+                                            result += si.Certificate.Thumbprint.ToLower().ToCharArray().Aggregate("",
+                                                (_result, _c) =>
+                                                    _result += ((!string.IsNullOrEmpty(_result) && (_result.Length + 1) % 3 == 0) ? " " : "")
+                                                        + _c.ToString()
+                                                        );
+                                            break;
+                                        default:
+                                            result += "Unknown certificate data specifier: ";
+                                            result += c.ToString();
+                                            break;
+                                    }
+                                    result += "\n";
+                                    return result;
+                                }));
                 }
                 cms.CheckSignature(false);
                 result_append("Signature certificate validated.");

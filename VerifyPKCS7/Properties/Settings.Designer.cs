@@ -116,5 +116,17 @@ namespace VerifyPKCS7.Properties {
                 this["WindowSize"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ndibasfx")]
+        public string PrintCertData {
+            get {
+                return ((string)(this["PrintCertData"]));
+            }
+            set {
+                this["PrintCertData"] = value;
+            }
+        }
     }
 }
