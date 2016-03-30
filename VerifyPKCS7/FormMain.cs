@@ -156,7 +156,7 @@ namespace VerifyPKCS7
             }
             if (msglen > MaxMsg)
             {
-                result_append(String.Format("File {0} longer than {1} bytes.", mfpath, MaxMsg));
+                result_append(String.Format(Properties.Resources.FileTooLong, mfpath, MaxMsg));
                 return;
             }
             msg = new byte[msglen];
@@ -174,7 +174,7 @@ namespace VerifyPKCS7
                 }
                 if (siglen > MaxSig)
                 {
-                    result_append(String.Format("File {0} longer than {1} bytes.", sfpath, MaxSig));
+                    result_append(String.Format(Properties.Resources.FileTooLong, sfpath, MaxSig));
                     return;
                 }
                 sig = new byte[siglen];
@@ -189,11 +189,11 @@ namespace VerifyPKCS7
                 SignedCms cms = new SignedCms(cmsg, detached);
                 if (detached)
                     cms.Decode(sig);
-                result_append("Message decoded..");
+                result_append(Properties.Resources.MessageDecoded);
                 cms.CheckHash();
-                result_append("Hash checked..");
+                result_append(Properties.Resources.HashChecked);
                 cms.CheckSignature(true);
-                result_append("Signature checked..");
+                result_append(Properties.Resources.SignatureChecked);
                 foreach (SignerInfo si in cms.SignerInfos)
                 {
 
@@ -204,31 +204,31 @@ namespace VerifyPKCS7
                                     switch (c)
                                     {
                                         case 'n':
-                                            result += "Serial : ";
+                                            result += Properties.Resources.CertSerial;
                                             result += si.Certificate.SerialNumber.ToString();
                                             break;
                                         case 'd':
-                                            result += "Digest Algorithm: ";
+                                            result += Properties.Resources.CertDigestAlgorithm;
                                             result += string.Format("{0} ({1})", si.DigestAlgorithm.FriendlyName, si.DigestAlgorithm.Value);
                                             break;
                                         case 'i':
-                                            result += "Issuer: ";
+                                            result += Properties.Resources.CertIssuer;
                                             result += si.Certificate.Issuer.ToString();
                                             break;
                                         case 's':
-                                            result += "Subject: ";
+                                            result += Properties.Resources.CertSubject;
                                             result += si.Certificate.Subject.ToString();
                                             break;
                                         case 'b':
-                                            result += "Valid from: ";
+                                            result += Properties.Resources.CertNotBefore;
                                             result += si.Certificate.NotBefore.ToString();
                                             break;
                                         case 'a':
-                                            result += "Valid until: ";
+                                            result += Properties.Resources.CertNotAfter;
                                             result += si.Certificate.NotAfter.ToString();
                                             break;
                                         case 'f':
-                                            result += "Fingerprint: ";
+                                            result += Properties.Resources.CertThumb;
                                             result += si.Certificate.Thumbprint.ToLower().ToCharArray().Aggregate("",
                                                 (_result, _c) =>
                                                     _result += ((!string.IsNullOrEmpty(_result) && (_result.Length + 1) % 3 == 0) ? " " : "")
@@ -236,7 +236,7 @@ namespace VerifyPKCS7
                                                         );
                                             break;
                                         default:
-                                            result += "Unknown certificate data specifier: ";
+                                            result += Properties.Resources.CertUnk;
                                             result += c.ToString();
                                             break;
                                     }
@@ -245,7 +245,7 @@ namespace VerifyPKCS7
                                 }));
                 }
                 cms.CheckSignature(false);
-                result_append("Signature certificate validated.");
+                result_append(Properties.Resources.SignatureCertChecked);
             }
             catch (Exception e)
             {

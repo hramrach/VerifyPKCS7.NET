@@ -61,6 +61,87 @@ namespace VerifyPKCS7.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Digest Algorithm: .
+        /// </summary>
+        internal static string CertDigestAlgorithm {
+            get {
+                return ResourceManager.GetString("CertDigestAlgorithm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Issuer: .
+        /// </summary>
+        internal static string CertIssuer {
+            get {
+                return ResourceManager.GetString("CertIssuer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Valid until: .
+        /// </summary>
+        internal static string CertNotAfter {
+            get {
+                return ResourceManager.GetString("CertNotAfter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Valid from: .
+        /// </summary>
+        internal static string CertNotBefore {
+            get {
+                return ResourceManager.GetString("CertNotBefore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Serial: .
+        /// </summary>
+        internal static string CertSerial {
+            get {
+                return ResourceManager.GetString("CertSerial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subject: .
+        /// </summary>
+        internal static string CertSubject {
+            get {
+                return ResourceManager.GetString("CertSubject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fingerprint: .
+        /// </summary>
+        internal static string CertThumb {
+            get {
+                return ResourceManager.GetString("CertThumb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown certificate data specifier: .
+        /// </summary>
+        internal static string CertUnk {
+            get {
+                return ResourceManager.GetString("CertUnk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File {0} longer than {1} bytes..
+        /// </summary>
+        internal static string FileTooLong {
+            get {
+                return ResourceManager.GetString("FileTooLong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Goldkey {
@@ -81,12 +162,48 @@ namespace VerifyPKCS7.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hash checked...
+        /// </summary>
+        internal static string HashChecked {
+            get {
+                return ResourceManager.GetString("HashChecked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message decoded...
+        /// </summary>
+        internal static string MessageDecoded {
+            get {
+                return ResourceManager.GetString("MessageDecoded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Redkey {
             get {
                 object obj = ResourceManager.GetObject("Redkey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Signature certificate validated..
+        /// </summary>
+        internal static string SignatureCertChecked {
+            get {
+                return ResourceManager.GetString("SignatureCertChecked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Signature checked...
+        /// </summary>
+        internal static string SignatureChecked {
+            get {
+                return ResourceManager.GetString("SignatureChecked", resourceCulture);
             }
         }
     }

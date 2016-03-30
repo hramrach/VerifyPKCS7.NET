@@ -118,52 +118,35 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Goldkey" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\simple-goldkey.wmf;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Redkey" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\redkey.wmf;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Greenkey" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\greenkey.wmf;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+
   <data name="FileTooLong" xml:space="preserve">
-    <value>File {0} longer than {1} bytes.</value>
+    <value>Soubor {0} je delší než {1} bytů.</value>
   </data>
   <data name="MessageDecoded" xml:space="preserve">
-    <value>Message decoded..</value>
+    <value>Zpráva dekódována..</value>
   </data>
   <data name="HashChecked" xml:space="preserve">
-    <value>Hash checked..</value>
+    <value>Ověřen hash..</value>
   </data>
   <data name="SignatureChecked" xml:space="preserve">
-    <value>Signature checked..</value>
+    <value>Ověřen podpis..</value>
   </data>
   <data name="SignatureCertChecked" xml:space="preserve">
-    <value>Signature certificate validated.</value>
-  </data>
-  <data name="CertSerial" xml:space="preserve">
-    <value>Serial: </value>
-  </data>
-  <data name="CertDigestAlgorithm" xml:space="preserve">
-    <value>Digest Algorithm: </value>
+    <value>Ověřen certifikát podpisu.</value>
   </data>
   <data name="CertIssuer" xml:space="preserve">
-    <value>Issuer: </value>
+    <value>Vydavatel: </value>
   </data>
   <data name="CertSubject" xml:space="preserve">
-    <value>Subject: </value>
+    <value>Subjekt: </value>
   </data>
   <data name="CertNotBefore" xml:space="preserve">
-    <value>Valid from: </value>
+    <value>Platný od: </value>
   </data>
   <data name="CertNotAfter" xml:space="preserve">
-    <value>Valid until: </value>
+    <value>Platný do: </value>
   </data>
   <data name="CertThumb" xml:space="preserve">
-    <value>Fingerprint: </value>
-  </data>
-  <data name="CertUnk" xml:space="preserve">
-    <value>Unknown certificate data specifier: </value>
+    <value>Otisk: </value>
   </data>
 </root>
