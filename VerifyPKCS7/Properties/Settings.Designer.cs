@@ -119,7 +119,7 @@ namespace VerifyPKCS7.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ndibasfx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ndibasf")]
         public string PrintCertData {
             get {
                 return ((string)(this["PrintCertData"]));

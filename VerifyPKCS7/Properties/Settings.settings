@@ -27,7 +27,7 @@
       <Value Profile="(Default)">436, 417</Value>
     </Setting>
     <Setting Name="PrintCertData" Type="System.String" Scope="User">
-      <Value Profile="(Default)">ndibasfx</Value>
+      <Value Profile="(Default)">ndibasf</Value>
     </Setting>
   </Settings>
 </SettingsFile>
