@@ -257,45 +257,18 @@ namespace VerifyPKCS7
 
         private void comboExt_TextChanged(object sender, EventArgs e)
         {
-            string f;
-            bool valid = false;
             checkreset();
-            if ((comboExt.Text.Length > 0) && panelSigExt.Enabled)
-            {
-                f = addext();
-                if (!checkfile(f))
-                    f = replaceext();
-
-                SignatureFile.Text = f;
-                valid = checkfile(f);
-            }
-            else
-                SignatureFile.Text = "";
-
-            labelcolor(SignatureFile, valid);
-            if (valid)
-                updatecombo(comboExt, Properties.Settings.Default.EXTList, comboExt.Text);
-            if (!Properties.Settings.Default.EXT.Equals(comboExt.Text))
-            {
-                Properties.Settings.Default.EXT = comboExt.Text;
-                Properties.Settings.Default.Save();
-            }
-            sigcheck();
+            timerExt.Stop();
+            timerExt.Start();
         }
 
         private void comboFile_TextChanged(object sender, EventArgs e)
         {
-            bool valid = checkfile(comboFile.Text);
-
-            labelcolor(labelFile, valid);
-            if (valid)
-                updatecombo(comboFile, Properties.Settings.Default.MRUList, comboFile.Text);
-            if (!Properties.Settings.Default.MRU.Equals(comboFile.Text))
-            {
-                Properties.Settings.Default.MRU = comboFile.Text;
-                Properties.Settings.Default.Save();
-            }
-            comboExt_TextChanged(sender, e);
+            labelFile.BorderColor = labelFile.BackColor;
+            checkreset();
+            timerFile.Stop();
+            timerExt.Stop();
+            timerFile.Start();
         }
 
         private void checkDetached_CheckedChanged(object sender, EventArgs e)
@@ -342,6 +315,52 @@ namespace VerifyPKCS7
         private void FormMain_ClientSizeChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.Save();
+        }
+
+        private void timerExt_Tick(object sender, EventArgs e)
+        {
+            string f;
+            bool valid = false;
+            timerExt.Stop();
+
+            if ((comboExt.Text.Length > 0) && panelSigExt.Enabled)
+            {
+                f = addext();
+                if (!checkfile(f))
+                    f = replaceext();
+
+                SignatureFile.Text = f;
+                valid = checkfile(f);
+            }
+            else
+                SignatureFile.Text = "";
+
+            labelcolor(SignatureFile, valid);
+            if (valid)
+                updatecombo(comboExt, Properties.Settings.Default.EXTList, comboExt.Text);
+            if (!Properties.Settings.Default.EXT.Equals(comboExt.Text))
+            {
+                Properties.Settings.Default.EXT = comboExt.Text;
+                Properties.Settings.Default.Save();
+            }
+            sigcheck();
+        }
+
+        private void timerFile_Tick(object sender, EventArgs e)
+        {
+            bool valid;
+            timerFile.Stop();
+            valid = checkfile(comboFile.Text);            
+
+            labelcolor(labelFile, valid);
+            if (valid)
+                updatecombo(comboFile, Properties.Settings.Default.MRUList, comboFile.Text);
+            if (!Properties.Settings.Default.MRU.Equals(comboFile.Text))
+            {
+                Properties.Settings.Default.MRU = comboFile.Text;
+                Properties.Settings.Default.Save();
+            }
+            timerExt_Tick(sender, e);
         }
     }
 }

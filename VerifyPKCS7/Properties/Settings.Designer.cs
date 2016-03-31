@@ -128,5 +128,17 @@ namespace VerifyPKCS7.Properties {
                 this["PrintCertData"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int ValidationTimerInterval {
+            get {
+                return ((int)(this["ValidationTimerInterval"]));
+            }
+            set {
+                this["ValidationTimerInterval"] = value;
+            }
+        }
     }
 }
