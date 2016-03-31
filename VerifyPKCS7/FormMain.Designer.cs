@@ -48,7 +48,6 @@
             this.SignatureFile = new LabelBorder.LabelBorder();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.timerFile = new System.Windows.Forms.Timer(this.components);
-            this.timerExt = new System.Windows.Forms.Timer(this.components);
             this.panelMain.SuspendLayout();
             this.panelFile.SuspendLayout();
             this.panelBottom.SuspendLayout();
@@ -192,11 +191,6 @@
             this.timerFile.Interval = global::VerifyPKCS7.Properties.Settings.Default.ValidationTimerInterval;
             this.timerFile.Tick += new System.EventHandler(this.timerFile_Tick);
             // 
-            // timerExt
-            // 
-            this.timerExt.Interval = global::VerifyPKCS7.Properties.Settings.Default.ValidationTimerInterval;
-            this.timerExt.Tick += new System.EventHandler(this.timerExt_Tick);
-            // 
             // FormMain
             // 
             this.AcceptButton = this.buttonDismiss;
@@ -251,7 +245,6 @@
         private LabelBorder.LabelBorder labelFile;
         private LabelBorder.LabelBorder SignatureFile;
         private System.Windows.Forms.Timer timerFile;
-        private System.Windows.Forms.Timer timerExt;
     }
 }
 

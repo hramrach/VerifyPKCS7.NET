@@ -258,8 +258,8 @@ namespace VerifyPKCS7
         private void comboExt_TextChanged(object sender, EventArgs e)
         {
             checkreset();
-            timerExt.Stop();
-            timerExt.Start();
+            timerFile.Stop();
+            timerFile.Start();
         }
 
         private void comboFile_TextChanged(object sender, EventArgs e)
@@ -267,7 +267,6 @@ namespace VerifyPKCS7
             labelFile.BorderColor = labelFile.BackColor;
             checkreset();
             timerFile.Stop();
-            timerExt.Stop();
             timerFile.Start();
         }
 
@@ -321,7 +320,7 @@ namespace VerifyPKCS7
         {
             string f;
             bool valid = false;
-            timerExt.Stop();
+            timerFile.Stop();
 
             if ((comboExt.Text.Length > 0) && panelSigExt.Enabled)
             {
