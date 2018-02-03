@@ -1,4 +1,4 @@
-#Dotty Netty Pointy Clicky Siggy Checky Appy
+# Dotty Netty Pointy Clicky Siggy Checky Appy
 <table><tr><td>
 <img alt="Valid signature" src="https://raw.githubusercontent.com/hramrach/VerifyPKCS7.NET/bin/VerifyPKCS7 valid signature.png"/>
 </td><td>
@@ -10,12 +10,12 @@
 </td></tr></table>
 
 
-######Downloads
+###### Downloads
 
  * [.Net binary (zip)](https://github.com/hramrach/VerifyPKCS7.NET/blob/bin/VerifyPKCS7.zip?raw=true)
  * [.Net binary (7z)](https://github.com/hramrach/VerifyPKCS7.NET/blob/bin/VerifyPKCS7.7z?raw=true)
 
-######WTF?
+###### WTF?
 
 This is a Windows .NET application for checking a PKCS#7 signature using the .NET libraries and the built-in system certificate store.
 
